@@ -1,0 +1,108 @@
+Название точки привлечения туристов,Кол-во запросов в месяц,Тип точки привлечения туристов,Долгота,Доступность автомобиля,Доступность автобуса,Доступность внедорожника,Доступность водныого транспорта,Доступность самолета,Широта,Театр,Этнический центр,Музей,Детский туризм,Городские достопримечательности,Достопримечательность,Культурный центр,Судостроение,Нац. парк,Санаторий,Обзорная площадка,Горнолыжный курорт
+Архангельский театр драмы имени М.В. Ломоносова,9000.0,Театр,40.51528,False,False,False,False,False,64.536504,True,False,False,False,False,False,False,False,False,False,False,False
+"""Беломорские узоры"" (Народные художественные промыслы)",466.0,Этнический центр,40.520756,True,True,False,False,False,64.559452,False,True,False,False,False,False,False,False,False,False,False,False
+Архангельский молодежный театр,446.0,Театр,40.519231,True,True,False,False,False,64.549876,True,False,False,False,False,False,False,False,False,False,False,False
+Архангельский музей изобразительных искусств,248.0,Музей,40.518417,True,True,False,False,False,64.539888,False,False,True,False,False,False,False,False,False,False,False,False
+Архангельский театр кукол,1400.0,Театр,40.529639,True,True,False,False,False,64.53185,True,False,False,False,False,False,False,False,False,False,False,False
+Волшебный дом Снеговика,16.0,Детский туризм,40.506577,True,True,False,False,False,64.575223,False,False,False,True,False,False,False,False,False,False,False,False
+Архангельские гостиные дворы,70.0,Музей,40.509542,True,True,False,False,False,64.538975,False,False,True,False,False,False,False,False,False,False,False,False
+Дендрологический сад имени И.М. Стратоновича,77.0,Городские достопримечательности,40.54962,True,True,False,False,False,64.52861,False,False,False,False,True,False,False,False,False,False,False,False
+"Комплекс исторических зданий ""Подворье Соловецкого монастыря""",628.0,Городские достопримечательности,40.520116,True,True,False,False,False,64.534126,False,False,False,False,True,False,False,False,False,False,False,False
+Михайло-Архангельский кафедральный собор,904.0,Городские достопримечательности,40.535919,True,True,False,False,False,64.52952,False,False,False,False,True,False,False,False,False,False,False,False
+Музей авиации Севера,32.0,Музей,40.712703,True,True,False,False,False,64.59567,False,False,True,False,False,False,False,False,False,False,False,False
+Музей Архангельского пряника-козули,23.0,Музей,40.527851,True,True,False,False,False,64.534952,False,False,True,False,False,False,False,False,False,False,False,False
+Музей Водорослевого комбината,43.0,Музей,40.686737,True,True,False,False,False,64.500085,False,False,True,False,False,False,False,False,False,False,False,False
+Музей художественного освоения Арктики им. А. А. Борисова,105.0,Музей,40.52501,True,True,False,False,False,64.534602,False,False,True,False,False,False,False,False,False,False,False,False
+Музей художника и сказочника С.Г. Писахова,43.0,Музей,40.525093,True,True,False,False,False,64.534909,False,False,True,False,False,False,False,False,False,False,False,False
+Новодвинская крепость (XVIII в.),2210.0,Достопримечательность,40.415838,True,True,False,False,False,64.700737,False,False,False,False,False,True,False,False,False,False,False,False
+Поморская филармония,874.0,Культурный центр,40.519167,True,True,False,False,False,64.536031,False,False,False,False,False,False,True,False,False,False,False,False
+Поморская шхуна,32.0,Судостроение,40.550544,True,True,False,False,False,64.529912,False,False,False,False,False,False,False,True,False,False,False,False
+Северный морской музей,851.0,Музей,40.516926,True,True,False,False,False,64.53407,False,False,True,False,False,False,False,False,False,False,False,False
+Северный русский народный хор,478.0,Культурный центр,40.551904,True,True,False,False,False,64.550188,False,False,False,False,False,False,True,False,False,False,False,False
+Соборная (Красная) пристань,2402.0,Достопримечательность,40.51428,True,True,False,False,False,64.534974,False,False,False,False,False,True,False,False,False,False,False,False
+Усадебный дом Е. К. Плотниковой,77.0,Музей,40.521813,True,True,False,False,False,64.53359,False,False,True,False,False,False,False,False,False,False,False,False
+"Центр традиционной и народной культуры ""Берендей""",85.0,Этнический центр,42.113482,True,True,False,False,False,61.078508,False,True,False,False,False,False,False,False,False,False,False,False
+Вельский краеведческий музей им. В.Ф. Кулакова,159.0,Музей,42.113134,True,True,False,False,False,61.076279,False,False,True,False,False,False,False,False,False,False,False,False
+"Научно-образовательный и культурный центр ""Дом Карпеченко""",52.0,Достопримечательность,42.113971,True,True,False,False,False,61.074886,False,False,False,False,False,True,False,False,False,False,False,False
+Хорошевский коневодческий комплекс,149.0,Достопримечательность,42.073439,True,True,False,False,False,61.079328,False,False,False,False,False,True,False,False,False,False,False,False
+"Экспозиционно-выставочный комплекс ""Музей домовых росписей Поважья""",18.0,Этнический центр,42.112238,True,True,False,False,False,61.07677,False,True,False,False,False,False,False,False,False,False,False,False
+Вилегодский районный краеведческий музей,23.0,Достопримечательность,47.982437,True,True,False,False,False,61.112289,False,False,False,False,False,True,False,False,False,False,False,False
+"Музей кухни и гОвори ""Деревенька на Виледи""",67.0,Достопримечательность,47.739497,True,True,False,False,False,61.24905,False,False,False,False,False,True,False,False,False,False,False,False
+Свято-Ильинская церковь,74.0,Достопримечательность,49.590256,True,True,False,False,False,62.096883,False,False,False,False,False,True,False,False,False,False,False,False
+Храм святителя Николая Чудотворца в селе Никольск,129.0,Достопримечательность,47.723629,True,True,False,False,False,61.256228,False,False,False,False,False,True,False,False,False,False,False,False
+"""Марусин дом"", креативное пространство",46.0,Этнический центр,38.940086,True,True,False,False,False,61.500379,False,True,False,False,False,False,False,False,False,False,False,False
+"Бабкина поляна - ""памятное место"" мастера Каргопольской глиняной игрушки Ульяны Ивановны Бабкиной",36.0,Достопримечательность,38.750425,True,True,False,False,False,61.53524,False,False,False,False,False,True,False,False,False,False,False,False
+Введенская церковь (XIX в.),20.0,Достопримечательность,38.948333,True,True,False,False,False,61.50354,False,False,False,False,False,True,False,False,False,False,False,False
+Каргопольский историко-архитектурный и художественный музей,32.0,Музей,38.931879,True,True,False,False,False,61.49344,False,False,True,False,False,False,False,False,False,False,False,False
+Музей «Ошевенская Волость»,20.0,Достопримечательность,38.780617,True,True,False,False,False,61.858458,False,False,False,False,False,True,False,False,False,False,False,False
+Музей семьи Шевелевых и каргопольской глиняной игрушки,18.0,Этнический центр,38.937558,True,True,False,False,False,61.506561,False,True,False,False,False,False,False,False,False,False,False,False
+Ошевенский Погост,229.0,Достопримечательность,38.780199,True,True,False,False,False,61.863173,False,False,False,False,False,True,False,False,False,False,False,False
+Собор Рождества Христова (Христорождественский собор),29.0,Достопримечательность,38.948234,True,True,False,False,False,61.503037,False,False,False,False,False,True,False,False,False,False,False,False
+"Центр народных ремесел ""Берегиня""",30.0,Этнический центр,38.95328,True,True,False,False,False,61.506805,False,True,False,False,False,False,False,False,False,False,False,False
+"Национальный парк ""Кенозерский""",3932.0,Нац. парк,38.253339,True,True,False,False,False,61.779822,False,False,False,False,False,False,False,False,True,False,False,False
+Дом-музей Н.Г. Кузнецова,144.0,Музей,46.615435,True,True,False,False,False,61.055146,False,False,True,False,False,False,False,False,False,False,False,False
+Коряжемский Николаевский монастырь,16.0,Достопримечательность,47.188923,True,True,False,False,False,61.315631,False,False,False,False,False,True,False,False,False,False,False,False
+Котласский краеведческий музей,103.0,Музей,46.628384,True,True,False,False,False,61.260602,False,False,True,False,False,False,False,False,False,False,False,False
+Дом-усадьба художника А. Борисова,29.0,Музей,46.024354,True,True,False,False,False,61.537149,False,False,True,False,False,False,False,False,False,False,False,False
+Красноборский историко-мемориальный и художественный музей имени С.И. Тупицына,17.0,Музей,45.940148,True,True,False,False,False,61.559635,False,False,True,False,False,False,False,False,False,False,False,False
+"Санаторий ""Солониха""",2462.0,Санаторий,45.998683,True,True,False,False,False,61.509683,False,False,False,False,False,False,False,False,False,True,False,False
+Резиденция Матушки Зимы,36.0,Детский туризм,49.078397,True,True,False,False,False,62.172214,False,False,False,True,False,False,False,False,False,False,False,False
+Церковь во имя Всех Святых (Яренск),15.0,Достопримечательность,49.101592,True,True,False,False,False,62.172591,False,False,False,False,False,True,False,False,False,False,False,False
+Лешуконский дом ремёсел,7.0,Этнический центр,45.763164,True,True,False,False,False,64.90067,False,True,False,False,False,False,False,False,False,False,False,False
+Мезенский историко-краеведческий музей,26.0,Музей,44.246118,True,True,False,False,False,65.8408,False,False,True,False,False,False,False,False,False,False,False,False
+"Музей ""Короля лыж"" В.С. Кузина",1.0,Музей,44.606834,True,True,False,False,False,65.572896,False,False,True,False,False,False,False,False,False,False,False,False
+Музей мельниц,1.0,Музей,44.607297,True,True,False,False,False,65.573143,False,False,True,False,False,False,False,False,False,False,False,False
+Одигитриевская церковь в Кимже,8.0,Музей,44.606233,True,True,False,False,False,65.571011,False,False,True,False,False,False,False,False,False,False,False,False
+"Национальный парк ""Онежское Поморье""",755.0,Нац. парк,37.204318,True,True,False,False,False,64.970226,False,False,False,False,False,False,False,False,True,False,False,False
+"""Дом Няна"", краеведческий центр",70.0,Достопримечательность,40.20407,False,False,True,False,False,61.663596,False,False,False,False,False,True,False,False,False,False,False,False
+Вознесенская церковь и колокольня в Пияле,7.0,Достопримечательность,39.067961,True,True,False,False,False,63.461,False,False,False,False,False,True,False,False,False,False,False,False
+Деревянный храм Зосимы и Савватия Соловецких (XIX век) и деревянный тройник (XVII - XVIII век),111.0,Достопримечательность,37.698328,False,False,True,False,False,63.9435,False,False,False,False,False,True,False,False,False,False,False,False
+Дом-музей полярного исследователя Александра Кучина,1.0,Музей,38.120311,True,True,False,False,False,63.9077,False,False,True,False,False,False,False,False,False,False,False,False
+Крестный монастырь на острове Кий,21.0,Достопримечательность,37.890115,False,False,False,True,False,63.998502,False,False,False,False,False,True,False,False,False,False,False,False
+Онежский историко-мемориальный музей,23.0,Музей,38.115364,False,False,False,True,False,63.900479,False,False,True,False,False,False,False,False,False,False,False,False
+Свято-Богоявленский Кожеозерский монастырь,305.0,Достопримечательность,38.083091,False,False,False,True,False,63.158198,False,False,False,False,False,True,False,False,False,False,False,False
+Дом пинежской прялки,1.0,Музей,43.385266,True,True,False,False,False,64.68373,False,False,True,False,False,False,False,False,False,False,False,False
+Карпогорский районный Дом народного творчества,9.0,Этнический центр,44.442234,True,True,False,False,False,63.999392,False,True,False,False,False,False,False,False,False,False,False,False
+Музей Карста,2.0,Музей,44.076387,True,True,False,False,False,64.84839,False,False,True,False,False,False,False,False,False,False,False,False
+Свято-Артемиево-Веркольский Мужской монастырь,87.0,Достопримечательность,45.160274,True,True,False,False,False,63.79767,False,False,False,False,False,True,False,False,False,False,False,False
+Семейный музей Абрамовых (Семейный музей в доме брата Ф. Абрамова – Михаила),1.0,Музей,45.139203,True,True,False,False,False,63.803191,False,False,True,False,False,False,False,False,False,False,False,False
+Сурский Иоанновский женский монастырь,49.0,Достопримечательность,45.63601,True,True,False,False,False,63.576403,False,False,False,False,False,True,False,False,False,False,False,False
+Церковь Покрова Пресвятой Богородицы в д. Шотова,8.0,Достопримечательность,44.337733,True,True,False,False,False,64.012063,False,False,False,False,False,True,False,False,False,False,False,False
+Коношский краеведческий музей,43.0,Музей,40.254381,True,True,False,False,False,60.974465,False,False,True,False,False,False,False,False,False,False,False,False
+"Музейно-выставочное пространство ""Иосиф Бродский в Норенской""",4.0,Музей,40.674706,True,True,False,False,False,60.934555,False,False,True,False,False,False,False,False,False,False,False,False
+"""Малые Корелы"", музей деревянного зодчества",216.0,Музей,40.94509,True,True,False,False,False,64.453161,False,False,True,False,False,False,False,False,False,False,False,False
+Аэропорт-музей в деревне Лопшеньга,1.0,Музей,37.710701,True,True,False,False,False,64.984324,False,False,True,False,False,False,False,False,False,False,False,False
+Дом Сени Малины,5.0,Достопримечательность,40.873168,False,False,False,False,True,64.477736,False,False,False,False,False,True,False,False,False,False,False,False
+Музей Лоцманской славы,9.0,Достопримечательность,40.437487,True,True,False,False,False,64.595441,False,False,False,False,False,True,False,False,False,False,False,False
+Музей народных промыслов и ремесел Приморья,62.0,Музей,40.847891,True,True,False,False,False,64.477552,False,False,True,False,False,False,False,False,False,False,False,False
+Музей поморской варежки,10.0,Музей,40.806877,True,True,False,False,False,64.416813,False,False,True,False,False,False,False,False,False,False,False,False
+"Санаторий ""Беломорье""",12400.0,Санаторий,40.888114,True,True,False,False,False,64.2945,False,False,False,False,False,False,False,False,False,True,False,False
+Свято-Троицкий Антониево-Сийский мужской монастырь,1079.0,Достопримечательность,42.090065,True,True,False,False,False,63.581279,False,False,False,False,False,True,False,False,False,False,False,False
+Храм Вознесения Господня,5.0,Достопримечательность,40.34131,True,True,False,False,False,64.577047,False,False,False,False,False,True,False,False,False,False,False,False
+Храмовый ансамбль в селе Нёнокса,24.0,Достопримечательность,39.191683,True,True,False,False,False,64.620519,False,False,False,False,False,True,False,False,False,False,False,False
+Яреньгский музей «Поморская изба»,96.0,Достопримечательность,34.62589,True,True,False,False,False,66.706467,False,False,False,False,False,True,False,False,False,False,False,False
+Остров Ягры,1687.0,Обзорная площадка,39.825897,True,True,False,False,False,64.61882,False,False,False,False,False,False,False,False,False,False,True,False
+Северодвинский драматический театр,1500.0,Театр,39.795789,True,True,False,False,False,64.55172,True,False,False,False,False,False,False,False,False,False,False,False
+Северодвинский краеведческий музей,300.0,Музей,39.281036,True,True,False,False,False,64.623892,False,False,True,False,False,False,False,False,False,False,False,False
+Голгофо-Распятский скит,109.0,Достопримечательность,36.04829,True,True,False,False,False,65.146848,False,False,False,False,False,True,False,False,False,False,False,False
+Савватиевский скит,29.0,Достопримечательность,35.605541,False,False,False,False,True,65.117688,False,False,False,False,False,True,False,False,False,False,False,False
+Свято-Троицкий Анзерский скит,21.0,Достопримечательность,36.015218,False,False,False,False,True,65.161048,False,False,False,False,False,True,False,False,False,False,False,False
+Соловецкий кремль,199.0,Достопримечательность,35.713637,False,False,False,False,True,65.028143,False,False,False,False,False,True,False,False,False,False,False,False
+Соловецкий морской музей,53.0,Музей,35.705865,False,False,False,False,True,65.024364,False,False,True,False,False,False,False,False,False,False,False,False
+Соловецкий монастырь,15622.0,Достопримечательность,35.717365,False,False,False,False,True,65.024281,False,False,False,False,False,True,False,False,False,False,False,False
+"Благовещенский собор (XVI в.), экспозиционный комплекс",130.0,Музей,46.924626,False,False,False,False,True,61.327791,False,False,True,False,False,False,False,False,False,False,False,False
+Введенский собор,118.0,Достопримечательность,46.928389,True,True,False,False,False,61.333007,False,False,False,False,False,True,False,False,False,False,False,False
+Дом купцов Пьянковых (I пол. XIX в.),194.0,Музей,46.932067,True,True,False,False,False,61.331277,False,False,True,False,False,False,False,False,False,False,False,False
+Литературная усадьба и музей Козьмы Пруткова,49.0,Достопримечательность,46.929015,True,True,False,False,False,61.331288,False,False,False,False,False,True,False,False,False,False,False,False
+Музей политической ссылки (музей И.В. Сталина),90.0,Музей,46.934791,True,True,False,False,False,61.331951,False,False,True,False,False,False,False,False,False,False,False,False
+"Санаторий ""Сольвычегодск""",4380.0,Санаторий,46.931559,True,True,False,False,False,61.331642,False,False,False,False,False,False,False,False,False,True,False,False
+Сольвычегодский историко-художественный музей,143.0,Музей,46.931293,True,True,False,False,False,61.330122,False,False,True,False,False,False,False,False,False,False,False,False
+"Экспозиционно-выставочный комплекс ""Дом купцов Хаминовых""",15.0,Музей,46.928978,True,True,False,False,False,61.330416,False,False,True,False,False,False,False,False,False,False,False,False
+"""Малиновка"", Центр активного отдыха",200.0,Горнолыжный курорт,43.357443,True,True,False,False,False,61.12472,False,False,False,False,False,False,False,False,False,False,False,True
+Устьянский краеведческий музей,84.0,Музей,43.162053,True,True,False,False,False,61.090365,False,False,True,False,False,False,False,False,False,False,False,False
+Устьянский центр народного творчества,23.0,Этнический центр,43.292886,True,True,False,False,False,61.111688,False,True,False,False,False,False,False,False,False,False,False,False
+Историко-мемориальный музей М.В. Ломоносова,126.0,Достопримечательность,41.733645,True,True,False,False,False,64.2302,False,False,False,False,False,True,False,False,False,False,False,False
+Село Ломоносово,4073.0,Достопримечательность,41.732359,True,True,False,False,False,64.22938,False,False,False,False,False,True,False,False,False,False,False,False
+Фабрика Холмогорской резьбы по кости,37.0,Этнический центр,41.733516,True,True,False,False,False,64.230262,False,True,False,False,False,False,False,False,False,False,False,False
+"Церковь Димитрия Солунского, с. Ломоносово",38.0,Достопримечательность,41.739181,True,True,False,False,False,64.23162,False,False,False,False,False,True,False,False,False,False,False,False
+Шенкурский районный краеведческий музей,150.0,Достопримечательность,42.902558,True,True,False,False,False,62.103525,False,False,False,False,False,True,False,False,False,False,False,False
