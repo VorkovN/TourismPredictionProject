@@ -1,0 +1,162 @@
+openapi: '3.0.3'
+info:
+  version: '1.0.0'
+  title: Базовые модели для запросов
+paths: { }
+
+components:
+  schemas:
+    # messages
+    AudioSessionToMediaServer:
+      type: object
+      description: Сообщение медиа серверу об изменении статуса аудио сессии
+      properties:
+        armId:
+          description: Идентификатор АРМ оператора
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+        operation:
+          $ref: "#/components/schemas/Operation"
+    AudioSessionToCdku:
+      type: object
+      description: Сообщение ЦДКУ о результате изменения статуса аудио сессии
+      properties:
+        armId:
+          description: Идентификатор АРМ оператора
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+        result:
+          $ref: "#/components/schemas/SessionState"
+    AnnounceSessionToMediaServer:
+      type: object
+      description: Сообщение медиа серверу об изменении статуса оповещения
+      properties:
+        armId:
+          description: Идентификатор АРМ оператора
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+        operation:
+          $ref: "#/components/schemas/Operation"
+    AnnounceSessionToCdku:
+      type: object
+      description: Сообщение ЦДКУ о результате изменения статуса оповещения
+      properties:
+        armId:
+          description: Идентификатор АРМ оператора
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+        result:
+          $ref: "#/components/schemas/SessionState"
+    ChangeSessionOperatorToMediaServer:
+      type: object
+      description: Сообщение медиа серверу об изменении оператора сессии
+      properties:
+        oldArmId:
+          description: Первоначальный идентификатор АРМ оператора
+          type: integer
+        newArmId:
+          description: Новый идентификатор АРМ
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+    ChangeSessionOperatorToCdku:
+      type: object
+      description: Сообщение ЦДКУ о результате изменения статуса аудио сессии
+      properties:
+        armId:
+          description: Идентификатор АРМ оператора
+          type: integer
+        trainId:
+          description: Идентификатор поезда
+          type: integer
+        result:
+          $ref: "#/components/schemas/ChangeOperatorResult"
+    HealthCheckToMediaServer:
+      description: Данные состояния ЦДКУ отправляемые на медиа сервер
+      type: object
+      properties:
+        connectionState:
+          description: Состояние подключения ЦДКУ
+          type: boolean
+    HealthCheckToCdku:
+      description: Данные состояния медиа сервера отправляемые на ЦДКУ
+      type: object
+      properties:
+        connectionState:
+          description: Состояние подключения медиа сервера
+          type: boolean
+        clients:
+          description: Данные подключенных клиентов
+          type: array
+          items:
+            $ref: "#/components/schemas/ConnectionInfo"
+#    TODO: доработать запросы для получения архивных данных
+    # models
+    ConnectionInfo:
+      description: Данные подключенных клиентов
+      type: object
+      properties:
+        deviceId:
+          description: Идентификатор клиента
+          type: integer
+        deviceType:
+          $ref: "#/components/schemas/DeviceType"
+        connectionState:
+          description: Состояние подключения клиента
+          type: boolean
+    # enums
+    DeviceType:
+      description: Тип подключенного клиента
+      type: string
+      enum:
+        - arm-callcenter
+        - arm-operator
+        - train
+    Operation:
+      description: Команда
+      type: string
+      enum:
+        - start
+        - end
+    ChangeOperatorResult:
+      description: Результат смены оператора сессии
+      type: string
+      enum:
+        - unknown-error
+        - operator-changed
+        - operator-changed-error-session-continued
+        - operator-changed-error-session-closed
+    MediaType:
+      description: Вид медиаинформации для обмена
+      type: string
+      enum:
+        - archive-audio
+        - archive-video
+        - real-time-video
+    SessionState:
+      description: Статус аудио сессии СВОП
+      type: string
+      enum:
+        - unknown-error
+        - connection-success
+        - connection-error-arm-busy
+        - connection-error-train-busy
+        - disconnection-success
+        - disconnection-error-non-existent-session
+        - arm-failed-session-disconnected
+        - arm-failed-session-continued
+        - train-failed-session-disconnected
+        - train-failed-session-continued
+
+
+
+

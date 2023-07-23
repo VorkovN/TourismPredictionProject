@@ -1,0 +1,47 @@
+openapi: 3.0.3
+info:
+  title: Базовые модели для запросов
+  version: 1.0.0
+servers:
+- url: /
+paths: {}
+components:
+  schemas:
+    GuiToServer:
+      description: Данные подключенных клиентов
+      properties:
+        latitude:
+          description: Широта
+          type: integer
+        longitude:
+          description: Долгота
+          type: integer
+      type: object
+    ServerToGui:
+      description: Статистика от сервера
+      properties:
+        nearestHotels:
+          description: Список ближайших КСР
+          items:
+            $ref: '#/components/schemas/ObjectInfo'
+          type: array
+        nearestCafe:
+          description: Список ближайших общепитов
+          items:
+            $ref: '#/components/schemas/ObjectInfo'
+          type: array
+      type: object
+    ObjectInfo:
+      description: Данные подключенных клиентов
+      properties:
+        name:
+          description: Имя объекта
+          type: string
+        latitude:
+          description: Широта
+          type: integer
+        longitude:
+          description: Долгота
+          type: integer
+      type: object
+
