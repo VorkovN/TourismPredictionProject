@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import org.openapitools.client.model.TourismObjectType;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,8 +51,12 @@ import org.openapitools.client.JSON;
 /**
  * Данные подключенных клиентов
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T00:38:04.779889561+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T01:38:38.014693880+03:00[Europe/Moscow]")
 public class GuiToServer {
+  public static final String SERIALIZED_NAME_TOURISM_OBJECT_TYPE = "tourismObjectType";
+  @SerializedName(SERIALIZED_NAME_TOURISM_OBJECT_TYPE)
+  private TourismObjectType tourismObjectType;
+
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
   private Integer latitude;
@@ -62,6 +67,27 @@ public class GuiToServer {
 
   public GuiToServer() {
   }
+
+  public GuiToServer tourismObjectType(TourismObjectType tourismObjectType) {
+    
+    this.tourismObjectType = tourismObjectType;
+    return this;
+  }
+
+   /**
+   * Get tourismObjectType
+   * @return tourismObjectType
+  **/
+  @javax.annotation.Nullable
+  public TourismObjectType getTourismObjectType() {
+    return tourismObjectType;
+  }
+
+
+  public void setTourismObjectType(TourismObjectType tourismObjectType) {
+    this.tourismObjectType = tourismObjectType;
+  }
+
 
   public GuiToServer latitude(Integer latitude) {
     
@@ -115,19 +141,21 @@ public class GuiToServer {
       return false;
     }
     GuiToServer guiToServer = (GuiToServer) o;
-    return Objects.equals(this.latitude, guiToServer.latitude) &&
+    return Objects.equals(this.tourismObjectType, guiToServer.tourismObjectType) &&
+        Objects.equals(this.latitude, guiToServer.latitude) &&
         Objects.equals(this.longitude, guiToServer.longitude);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(latitude, longitude);
+    return Objects.hash(tourismObjectType, latitude, longitude);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GuiToServer {\n");
+    sb.append("    tourismObjectType: ").append(toIndentedString(tourismObjectType)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("}");
@@ -152,6 +180,7 @@ public class GuiToServer {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("tourismObjectType");
     openapiFields.add("latitude");
     openapiFields.add("longitude");
 

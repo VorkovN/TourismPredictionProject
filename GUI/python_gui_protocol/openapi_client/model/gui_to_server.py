@@ -38,12 +38,20 @@ class GuiToServer(
     class MetaOapg:
         
         class properties:
+        
+            @staticmethod
+            def tourismObjectType() -> typing.Type['TourismObjectType']:
+                return TourismObjectType
             latitude = schemas.IntSchema
             longitude = schemas.IntSchema
             __annotations__ = {
+                "tourismObjectType": tourismObjectType,
                 "latitude": latitude,
                 "longitude": longitude,
             }
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["tourismObjectType"]) -> 'TourismObjectType': ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["latitude"]) -> MetaOapg.properties.latitude: ...
@@ -54,10 +62,13 @@ class GuiToServer(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["latitude", "longitude", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["tourismObjectType", "latitude", "longitude", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["tourismObjectType"]) -> typing.Union['TourismObjectType', schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["latitude"]) -> typing.Union[MetaOapg.properties.latitude, schemas.Unset]: ...
@@ -68,13 +79,14 @@ class GuiToServer(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["latitude", "longitude", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["tourismObjectType", "latitude", "longitude", ], str]):
         return super().get_item_oapg(name)
     
 
     def __new__(
         cls,
         *_args: typing.Union[dict, frozendict.frozendict, ],
+        tourismObjectType: typing.Union['TourismObjectType', schemas.Unset] = schemas.unset,
         latitude: typing.Union[MetaOapg.properties.latitude, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         longitude: typing.Union[MetaOapg.properties.longitude, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -83,8 +95,11 @@ class GuiToServer(
         return super().__new__(
             cls,
             *_args,
+            tourismObjectType=tourismObjectType,
             latitude=latitude,
             longitude=longitude,
             _configuration=_configuration,
             **kwargs,
         )
+
+from openapi_client.model.tourism_object_type import TourismObjectType

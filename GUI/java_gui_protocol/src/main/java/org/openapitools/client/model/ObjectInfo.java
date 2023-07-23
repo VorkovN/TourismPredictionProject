@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Данные подключенных клиентов
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T00:38:04.779889561+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T01:38:38.014693880+03:00[Europe/Moscow]")
 public class ObjectInfo {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

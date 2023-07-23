@@ -1,11 +1,11 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/models/GuiToServer.md
 docs/models/ObjectInfo.md
 docs/models/ServerToGui.md
+docs/models/TourismObjectType.md
 git_push.sh
 openapi_client/__init__.py
 openapi_client/api_client.py
@@ -19,6 +19,8 @@ openapi_client/model/object_info.py
 openapi_client/model/object_info.pyi
 openapi_client/model/server_to_gui.py
 openapi_client/model/server_to_gui.pyi
+openapi_client/model/tourism_object_type.py
+openapi_client/model/tourism_object_type.pyi
 openapi_client/models/__init__.py
 openapi_client/rest.py
 openapi_client/schemas.py
@@ -28,7 +30,5 @@ setup.py
 test-requirements.txt
 test/__init__.py
 test/test_models/__init__.py
-test/test_models/test_gui_to_server.py
-test/test_models/test_object_info.py
-test/test_models/test_server_to_gui.py
+test/test_models/test_tourism_object_type.py
 tox.ini

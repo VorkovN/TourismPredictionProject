@@ -14,3 +14,4 @@
 from openapi_client.model.gui_to_server import GuiToServer
 from openapi_client.model.object_info import ObjectInfo
 from openapi_client.model.server_to_gui import ServerToGui
+from openapi_client.model.tourism_object_type import TourismObjectType

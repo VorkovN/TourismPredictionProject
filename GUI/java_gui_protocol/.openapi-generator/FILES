@@ -1,6 +1,5 @@
 .github/workflows/maven.yml
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -9,6 +8,7 @@ build.sbt
 docs/GuiToServer.md
 docs/ObjectInfo.md
 docs/ServerToGui.md
+docs/TourismObjectType.md
 git_push.sh
 gradle.properties
 gradle/wrapper/gradle-wrapper.jar
@@ -39,6 +39,5 @@ src/main/java/org/openapitools/client/model/AbstractOpenApiSchema.java
 src/main/java/org/openapitools/client/model/GuiToServer.java
 src/main/java/org/openapitools/client/model/ObjectInfo.java
 src/main/java/org/openapitools/client/model/ServerToGui.java
-src/test/java/org/openapitools/client/model/GuiToServerTest.java
-src/test/java/org/openapitools/client/model/ObjectInfoTest.java
-src/test/java/org/openapitools/client/model/ServerToGuiTest.java
+src/main/java/org/openapitools/client/model/TourismObjectType.java
+src/test/java/org/openapitools/client/model/TourismObjectTypeTest.java

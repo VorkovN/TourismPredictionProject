@@ -10,6 +10,8 @@ components:
     GuiToServer:
       description: Данные подключенных клиентов
       properties:
+        tourismObjectType:
+          $ref: '#/components/schemas/TourismObjectType'
         latitude:
           description: Широта
           type: integer
@@ -31,6 +33,22 @@ components:
             $ref: '#/components/schemas/ObjectInfo'
           type: array
       type: object
+    TourismObjectType:
+      description: Тип туристического объекта
+      enum:
+      - theatre
+      - ethnicCenter
+      - museum
+      - childrensTourism
+      - cityAttractions
+      - attraction
+      - culturalCentre
+      - shipbuilding
+      - nationalPark
+      - sanatorium
+      - lookout
+      - skiResort
+      type: string
     ObjectInfo:
       description: Данные подключенных клиентов
       properties:

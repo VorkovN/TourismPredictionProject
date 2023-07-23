@@ -11,6 +11,9 @@ components:
       description: Данные подключенных клиентов
       type: object
       properties:
+        tourismObjectType:
+          description: Тип туристичекого объекта
+          $ref: "#/components/schemas/TourismObjectType"
         latitude:
           description: Широта
           type: integer
@@ -32,6 +35,22 @@ components:
           items:
             $ref: "#/components/schemas/ObjectInfo"
     # models
+    TourismObjectType:
+      description: Тип туристического объекта
+      type: string
+      enum:
+        - theatre
+        - ethnicCenter
+        - museum
+        - childrensTourism
+        - cityAttractions
+        - attraction
+        - culturalCentre
+        - shipbuilding
+        - nationalPark
+        - sanatorium
+        - lookout
+        - skiResort
     ObjectInfo:
       description: Данные подключенных клиентов
       type: object

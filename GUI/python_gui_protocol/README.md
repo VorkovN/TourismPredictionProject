@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
  - [GuiToServer](docs/models/GuiToServer.md)
  - [ObjectInfo](docs/models/ObjectInfo.md)
  - [ServerToGui](docs/models/ServerToGui.md)
+ - [TourismObjectType](docs/models/TourismObjectType.md)
 
 ## Documentation For Authorization
 
