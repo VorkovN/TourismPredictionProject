@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: Базовые модели для запросов
+  version: 1.0.0
+servers:
+- url: /
+paths: {}
+components:
+  schemas:
+    MlToServer:
+      description: Предсказания ML
+      properties:
+        name:
+          description: Имя объекта
+          type: string
+        popularity:
+          description: Ожидаемое кол-во запросов в яндекс за месяц
+          type: integer
+      type: object
+    ServerToMl:
+      description: Параметры для ML модели от сервера
+      properties:
+        name:
+          description: Имя объекта
+          type: string
+        latitude:
+          description: Широта
+          type: string
+        longitude:
+          description: Долгота
+          type: int
+        coeffNearestPopularity:
+          description: Коэффициент кол-ва запросов в месяц окружающих объектов
+          type: int
+        carAvailability:
+          description: Доступность автомобиля
+          type: boolean
+        busAvailability:
+          description: Доступность автобуса
+          type: boolean
+        bigCarAvailability:
+          description: Доступность внедорожника
+          type: boolean
+        shipAvailability:
+          description: Доступность внедорожника
+          type: boolean
+        planeAvailability:
+          description: Доступность самолета
+          type: boolean
+        theatre:
+          description: Театр
+          type: boolean
+        ethnicCenter:
+          description: Этнический центр
+          type: boolean
+        museum:
+          description: Музей
+          type: boolean
+        childrensTourism:
+          description: Детский туризм
+          type: boolean
+        cityAttractions:
+          description: Городские достопримечательности
+          type: boolean
+        attraction:
+          description: Достопримечательность
+          type: boolean
+        culturalCentre:
+          description: Культурный центр
+          type: boolean
+        shipbuilding:
+          description: Судостроение
+          type: boolean
+        nationalPark:
+          description: Нац. парк
+          type: boolean
+        sanatorium:
+          description: Санаторий
+          type: boolean
+        lookout:
+          description: Обзорная площадка
+          type: boolean
+        skiResort:
+          description: Горнолыжный курорт
+          type: boolean
+      type: object
+
