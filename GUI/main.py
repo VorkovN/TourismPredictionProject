@@ -3,7 +3,7 @@ from threading import Thread
 import json
 from PyQt5.QtWidgets import QWidget, QPushButton, QApplication, QLabel, QGridLayout, QLineEdit
 
-TourismObjectType = {
+ObjectInfo = {
     "name": "",
     "latitude": 0.0,
     "longitude": 0.0
@@ -17,8 +17,8 @@ DataGuiToServer = {
 
 DataServerToGui = {
     "prediction": 0,
-    "nearestHotels": [TourismObjectType],
-    "nearestCafe": [TourismObjectType],
+    "nearestHotels": [ObjectInfo],
+    "nearestCafe": [ObjectInfo],
 }
 
 class EmulGui(QWidget):
