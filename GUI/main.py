@@ -1,8 +1,25 @@
 import pika, sys, os
 from threading import Thread
-import time
 import json
 from PyQt5.QtWidgets import QWidget, QPushButton, QApplication, QLabel, QGridLayout, QLineEdit
+
+TourismObjectType = {
+    "name": "",
+    "latitude": 0.0,
+    "longitude": 0.0
+}
+
+DataGuiToServer = {
+    "tourismObjectType": "",
+    "latitude": 0.0,
+    "longitude": 0.0
+}
+
+DataServerToGui = {
+    "prediction": 0,
+    "nearestHotels": TourismObjectType,
+    "nearestCafe": TourismObjectType,
+}
 
 class EmulGui(QWidget):
 
@@ -11,21 +28,22 @@ class EmulGui(QWidget):
 
         self.initUI(channelSend)
 
-    def sendMessage1(self, channelSend):
-        channelSend.basic_publish(exchange='gui2server', routing_key='gui2server-q1', body='Hello World! 2')
-        print("Sent 'Hello World! 2'")
+    def send(self, channelSend):
+        dataGuiToServer = DataGuiToServer
+        channelSend.basic_publish(exchange='gui2server', routing_key='gui2server-q1', body=json.dumps(dataGuiToServer))
+        print("Messagew sent")
 
     def initUI(self, channelSend):
 
-        lbl1 = QLabel('Широта')
-        lbl2 = QLabel('Долгота')
+        self.lbl1 = QLabel('Широта')
+        self.lbl2 = QLabel('Долгота')
 
-        le1 = QLineEdit()
-        le2 = QLineEdit()
+        self.le1 = QLineEdit()
+        self.le2 = QLineEdit()
 
-        btn1 = QPushButton('Запросить данные')
-        btn1.clicked.connect(lambda: self.sendMessage1(channelSend))
-        btn1.resize(btn1.sizeHint())
+        self.btn1 = QPushButton('Запросить данные')
+        self.btn1.clicked.connect(lambda: self.send(channelSend))
+        self.btn1.resize(self.btn1.sizeHint())
 
         lbl3 = QLabel('') # Оценка кол-ва запросов в месяц
         lbl4 = QLabel('') # Список ближайших КСР
@@ -34,13 +52,13 @@ class EmulGui(QWidget):
         grid = QGridLayout()
         grid.setSpacing(10)
 
-        grid.addWidget(lbl1, 1, 0)
-        grid.addWidget(le1, 1, 1)
+        grid.addWidget(self.lbl1, 1, 0)
+        grid.addWidget(self.le1, 1, 1)
 
-        grid.addWidget(lbl2, 2, 0)
-        grid.addWidget(le2, 2, 1)
+        grid.addWidget(self.lbl2, 2, 0)
+        grid.addWidget(self.le2, 2, 1)
 
-        grid.addWidget(btn1, 3, 0)
+        grid.addWidget(self.btn1, 3, 0)
 
         grid.addWidget(lbl3, 4, 0)
         grid.addWidget(lbl4, 5, 0)
@@ -58,24 +76,13 @@ class EmulGui(QWidget):
 
 
 def regularMessageCallback(ch, method, properties, body):
-    print(" [x] Received %r" % body)
+    print("Received %r" % json.loads(body))
+    dataServerToGui = DataServerToGui
+
 
 def handleRegularMessage(channelReceive):
     channelReceive.basic_consume(queue='server2gui-q1', on_message_callback=regularMessageCallback, auto_ack=True)
     channelReceive.start_consuming()
-
-def sendRegularMessage(channelSend):
-    while(True):
-        data = {
-            "id": 1,
-            "name": "My Name",
-            "description": "This is description about me"
-        }
-
-        message = json.dumps(data)
-        channelSend.basic_publish(exchange='gui2server', routing_key='gui2server-q1', body='Hello World! 3')
-        # print("Regular message sent")
-        time.sleep(1)
 
 def main():
 
@@ -99,10 +106,7 @@ def main():
         channelSend.queue_declare(queue='gui2server-q1')
     except Exception:
         print('gui2server has already declared')
-
     channelSend.queue_bind(queue='gui2server-q1', exchange='gui2server', routing_key='gui2server-q1')
-    sendThread = Thread(target=sendRegularMessage, args=(channelSend,))
-    sendThread.start()
 
     app = QApplication(sys.argv)
     gui = EmulGui(channelSend)

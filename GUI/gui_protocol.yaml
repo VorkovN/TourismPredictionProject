@@ -24,6 +24,9 @@ components:
       description: Статистика от сервера
       type: object
       properties:
+        prediction:
+          description: Предсказание от ML модели
+          type: integer
         nearestHotels:
           description: Список ближайших КСР
           type: array
