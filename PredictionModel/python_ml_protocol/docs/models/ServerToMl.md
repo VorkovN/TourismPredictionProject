@@ -11,9 +11,9 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  | Параметры д�
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **name** | str,  | str,  | Имя объекта | [optional] 
-**latitude** | str,  | str,  | Широта | [optional] 
-**longitude** | [**ModelInt**](ModelInt.md) | [**ModelInt**](ModelInt.md) | Долгота | [optional] 
-**coeffNearestPopularity** | [**ModelInt**](ModelInt.md) | [**ModelInt**](ModelInt.md) | Коэффициент кол-ва запросов в месяц окружающих объектов | [optional] 
+**latitude** |  |  | Широта | [optional] 
+**longitude** |  |  | Долгота | [optional] 
+**coeffNearestPopularity** |  |  | Коэффициент кол-ва запросов в месяц окружающих объектов | [optional] 
 **carAvailability** | bool,  | BoolClass,  | Доступность автомобиля | [optional] 
 **busAvailability** | bool,  | BoolClass,  | Доступность автобуса | [optional] 
 **bigCarAvailability** | bool,  | BoolClass,  | Доступность внедорожника | [optional] 

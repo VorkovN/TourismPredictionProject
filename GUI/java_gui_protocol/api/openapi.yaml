@@ -14,10 +14,10 @@ components:
           $ref: '#/components/schemas/TourismObjectType'
         latitude:
           description: Широта
-          type: integer
+          type: float
         longitude:
           description: Долгота
-          type: integer
+          type: float
       type: object
     ServerToGui:
       description: Статистика от сервера
@@ -57,9 +57,9 @@ components:
           type: string
         latitude:
           description: Широта
-          type: integer
+          type: float
         longitude:
           description: Долгота
-          type: integer
+          type: float
       type: object
 

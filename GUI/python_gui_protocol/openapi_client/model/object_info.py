@@ -39,8 +39,8 @@ class ObjectInfo(
         
         class properties:
             name = schemas.StrSchema
-            latitude = schemas.IntSchema
-            longitude = schemas.IntSchema
+            latitude = schemas.Schema
+            longitude = schemas.Schema
             __annotations__ = {
                 "name": name,
                 "latitude": latitude,
@@ -84,8 +84,8 @@ class ObjectInfo(
         cls,
         *_args: typing.Union[dict, frozendict.frozendict, ],
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
-        latitude: typing.Union[MetaOapg.properties.latitude, decimal.Decimal, int, schemas.Unset] = schemas.unset,
-        longitude: typing.Union[MetaOapg.properties.longitude, decimal.Decimal, int, schemas.Unset] = schemas.unset,
+        latitude: typing.Union[MetaOapg.properties.latitude, schemas.Unset] = schemas.unset,
+        longitude: typing.Union[MetaOapg.properties.longitude, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'ObjectInfo':

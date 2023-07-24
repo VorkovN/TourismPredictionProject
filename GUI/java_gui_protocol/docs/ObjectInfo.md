@@ -9,8 +9,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**name** | **String** | Имя объекта |  [optional] |
-|**latitude** | **Integer** | Широта |  [optional] |
-|**longitude** | **Integer** | Долгота |  [optional] |
+|**latitude** | **Float** | Широта |  [optional] |
+|**longitude** | **Float** | Долгота |  [optional] |
 
 
 

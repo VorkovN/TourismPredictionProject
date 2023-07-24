@@ -9,9 +9,9 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**name** | **String** | Имя объекта |  [optional] |
-|**latitude** | **String** | Широта |  [optional] |
-|**longitude** | **Integer** | Долгота |  [optional] |
-|**coeffNearestPopularity** | **Integer** | Коэффициент кол-ва запросов в месяц окружающих объектов |  [optional] |
+|**latitude** | **Float** | Широта |  [optional] |
+|**longitude** | **Float** | Долгота |  [optional] |
+|**coeffNearestPopularity** | **Float** | Коэффициент кол-ва запросов в месяц окружающих объектов |  [optional] |
 |**carAvailability** | **Boolean** | Доступность автомобиля |  [optional] |
 |**busAvailability** | **Boolean** | Доступность автобуса |  [optional] |
 |**bigCarAvailability** | **Boolean** | Доступность внедорожника |  [optional] |

@@ -15,7 +15,7 @@ components:
           type: string
         popularity:
           description: Ожидаемое кол-во запросов в яндекс за месяц
-          type: integer
+          type: float
       type: object
     ServerToMl:
       description: Параметры для ML модели от сервера
@@ -25,13 +25,13 @@ components:
           type: string
         latitude:
           description: Широта
-          type: string
+          type: float
         longitude:
           description: Долгота
-          type: int
+          type: float
         coeffNearestPopularity:
           description: Коэффициент кол-ва запросов в месяц окружающих объектов
-          type: int
+          type: float
         carAvailability:
           description: Доступность автомобиля
           type: boolean

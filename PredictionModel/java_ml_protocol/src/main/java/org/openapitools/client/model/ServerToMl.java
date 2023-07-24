@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Параметры для ML модели от сервера
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T01:22:48.582079612+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T21:00:24.517791613+03:00[Europe/Moscow]")
 public class ServerToMl {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -58,15 +58,15 @@ public class ServerToMl {
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
-  private String latitude;
+  private Float latitude = null;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
   @SerializedName(SERIALIZED_NAME_LONGITUDE)
-  private Integer longitude = null;
+  private Float longitude = null;
 
   public static final String SERIALIZED_NAME_COEFF_NEAREST_POPULARITY = "coeffNearestPopularity";
   @SerializedName(SERIALIZED_NAME_COEFF_NEAREST_POPULARITY)
-  private Integer coeffNearestPopularity = null;
+  private Float coeffNearestPopularity = null;
 
   public static final String SERIALIZED_NAME_CAR_AVAILABILITY = "carAvailability";
   @SerializedName(SERIALIZED_NAME_CAR_AVAILABILITY)
@@ -160,7 +160,7 @@ public class ServerToMl {
   }
 
 
-  public ServerToMl latitude(String latitude) {
+  public ServerToMl latitude(Float latitude) {
     
     this.latitude = latitude;
     return this;
@@ -171,17 +171,17 @@ public class ServerToMl {
    * @return latitude
   **/
   @javax.annotation.Nullable
-  public String getLatitude() {
+  public Float getLatitude() {
     return latitude;
   }
 
 
-  public void setLatitude(String latitude) {
+  public void setLatitude(Float latitude) {
     this.latitude = latitude;
   }
 
 
-  public ServerToMl longitude(Integer longitude) {
+  public ServerToMl longitude(Float longitude) {
     
     this.longitude = longitude;
     return this;
@@ -192,17 +192,17 @@ public class ServerToMl {
    * @return longitude
   **/
   @javax.annotation.Nullable
-  public Integer getLongitude() {
+  public Float getLongitude() {
     return longitude;
   }
 
 
-  public void setLongitude(Integer longitude) {
+  public void setLongitude(Float longitude) {
     this.longitude = longitude;
   }
 
 
-  public ServerToMl coeffNearestPopularity(Integer coeffNearestPopularity) {
+  public ServerToMl coeffNearestPopularity(Float coeffNearestPopularity) {
     
     this.coeffNearestPopularity = coeffNearestPopularity;
     return this;
@@ -213,12 +213,12 @@ public class ServerToMl {
    * @return coeffNearestPopularity
   **/
   @javax.annotation.Nullable
-  public Integer getCoeffNearestPopularity() {
+  public Float getCoeffNearestPopularity() {
     return coeffNearestPopularity;
   }
 
 
-  public void setCoeffNearestPopularity(Integer coeffNearestPopularity) {
+  public void setCoeffNearestPopularity(Float coeffNearestPopularity) {
     this.coeffNearestPopularity = coeffNearestPopularity;
   }
 
@@ -713,9 +713,6 @@ public class ServerToMl {
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if ((jsonObj.get("latitude") != null && !jsonObj.get("latitude").isJsonNull()) && !jsonObj.get("latitude").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `latitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("latitude").toString()));
       }
   }
 

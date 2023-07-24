@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
 /**
  * Статистика от сервера
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T20:57:11.039974107+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T20:59:40.132732482+03:00[Europe/Moscow]")
 public class ServerToGui {
   public static final String SERIALIZED_NAME_NEAREST_HOTELS = "nearestHotels";
   @SerializedName(SERIALIZED_NAME_NEAREST_HOTELS)

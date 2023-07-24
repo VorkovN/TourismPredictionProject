@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * Предсказания ML
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T01:22:48.582079612+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T21:00:24.517791613+03:00[Europe/Moscow]")
 public class MlToServer {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -58,7 +58,7 @@ public class MlToServer {
 
   public static final String SERIALIZED_NAME_POPULARITY = "popularity";
   @SerializedName(SERIALIZED_NAME_POPULARITY)
-  private Integer popularity;
+  private Float popularity = null;
 
   public MlToServer() {
   }
@@ -84,7 +84,7 @@ public class MlToServer {
   }
 
 
-  public MlToServer popularity(Integer popularity) {
+  public MlToServer popularity(Float popularity) {
     
     this.popularity = popularity;
     return this;
@@ -95,12 +95,12 @@ public class MlToServer {
    * @return popularity
   **/
   @javax.annotation.Nullable
-  public Integer getPopularity() {
+  public Float getPopularity() {
     return popularity;
   }
 
 
-  public void setPopularity(Integer popularity) {
+  public void setPopularity(Float popularity) {
     this.popularity = popularity;
   }
 

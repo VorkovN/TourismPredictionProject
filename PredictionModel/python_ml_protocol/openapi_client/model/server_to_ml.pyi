@@ -39,15 +39,9 @@ class ServerToMl(
         
         class properties:
             name = schemas.StrSchema
-            latitude = schemas.StrSchema
-        
-            @staticmethod
-            def longitude() -> typing.Type['ModelInt']:
-                return ModelInt
-        
-            @staticmethod
-            def coeffNearestPopularity() -> typing.Type['ModelInt']:
-                return ModelInt
+            latitude = schemas.Schema
+            longitude = schemas.Schema
+            coeffNearestPopularity = schemas.Schema
             carAvailability = schemas.BoolSchema
             busAvailability = schemas.BoolSchema
             bigCarAvailability = schemas.BoolSchema
@@ -96,10 +90,10 @@ class ServerToMl(
     def __getitem__(self, name: typing_extensions.Literal["latitude"]) -> MetaOapg.properties.latitude: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["longitude"]) -> 'ModelInt': ...
+    def __getitem__(self, name: typing_extensions.Literal["longitude"]) -> MetaOapg.properties.longitude: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["coeffNearestPopularity"]) -> 'ModelInt': ...
+    def __getitem__(self, name: typing_extensions.Literal["coeffNearestPopularity"]) -> MetaOapg.properties.coeffNearestPopularity: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["carAvailability"]) -> MetaOapg.properties.carAvailability: ...
@@ -167,10 +161,10 @@ class ServerToMl(
     def get_item_oapg(self, name: typing_extensions.Literal["latitude"]) -> typing.Union[MetaOapg.properties.latitude, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["longitude"]) -> typing.Union['ModelInt', schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["longitude"]) -> typing.Union[MetaOapg.properties.longitude, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["coeffNearestPopularity"]) -> typing.Union['ModelInt', schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["coeffNearestPopularity"]) -> typing.Union[MetaOapg.properties.coeffNearestPopularity, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["carAvailability"]) -> typing.Union[MetaOapg.properties.carAvailability, schemas.Unset]: ...
@@ -234,9 +228,9 @@ class ServerToMl(
         cls,
         *_args: typing.Union[dict, frozendict.frozendict, ],
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
-        latitude: typing.Union[MetaOapg.properties.latitude, str, schemas.Unset] = schemas.unset,
-        longitude: typing.Union['ModelInt', schemas.Unset] = schemas.unset,
-        coeffNearestPopularity: typing.Union['ModelInt', schemas.Unset] = schemas.unset,
+        latitude: typing.Union[MetaOapg.properties.latitude, schemas.Unset] = schemas.unset,
+        longitude: typing.Union[MetaOapg.properties.longitude, schemas.Unset] = schemas.unset,
+        coeffNearestPopularity: typing.Union[MetaOapg.properties.coeffNearestPopularity, schemas.Unset] = schemas.unset,
         carAvailability: typing.Union[MetaOapg.properties.carAvailability, bool, schemas.Unset] = schemas.unset,
         busAvailability: typing.Union[MetaOapg.properties.busAvailability, bool, schemas.Unset] = schemas.unset,
         bigCarAvailability: typing.Union[MetaOapg.properties.bigCarAvailability, bool, schemas.Unset] = schemas.unset,
@@ -284,5 +278,3 @@ class ServerToMl(
             _configuration=_configuration,
             **kwargs,
         )
-
-from openapi_client.model.model_int import ModelInt

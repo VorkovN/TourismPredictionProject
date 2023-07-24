@@ -1,6 +1,5 @@
 .gitignore
 .gitlab-ci.yml
-.openapi-generator-ignore
 .travis.yml
 README.md
 docs/models/MlToServer.md
@@ -25,6 +24,4 @@ setup.py
 test-requirements.txt
 test/__init__.py
 test/test_models/__init__.py
-test/test_models/test_ml_to_server.py
-test/test_models/test_server_to_ml.py
 tox.ini

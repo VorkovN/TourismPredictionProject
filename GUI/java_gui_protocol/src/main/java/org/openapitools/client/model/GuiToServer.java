@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Данные подключенных клиентов
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T20:57:11.039974107+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T20:59:40.132732482+03:00[Europe/Moscow]")
 public class GuiToServer {
   public static final String SERIALIZED_NAME_TOURISM_OBJECT_TYPE = "tourismObjectType";
   @SerializedName(SERIALIZED_NAME_TOURISM_OBJECT_TYPE)
@@ -59,11 +59,11 @@ public class GuiToServer {
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
-  private Integer latitude;
+  private Float latitude = null;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
   @SerializedName(SERIALIZED_NAME_LONGITUDE)
-  private Integer longitude;
+  private Float longitude = null;
 
   public GuiToServer() {
   }
@@ -89,7 +89,7 @@ public class GuiToServer {
   }
 
 
-  public GuiToServer latitude(Integer latitude) {
+  public GuiToServer latitude(Float latitude) {
     
     this.latitude = latitude;
     return this;
@@ -100,17 +100,17 @@ public class GuiToServer {
    * @return latitude
   **/
   @javax.annotation.Nullable
-  public Integer getLatitude() {
+  public Float getLatitude() {
     return latitude;
   }
 
 
-  public void setLatitude(Integer latitude) {
+  public void setLatitude(Float latitude) {
     this.latitude = latitude;
   }
 
 
-  public GuiToServer longitude(Integer longitude) {
+  public GuiToServer longitude(Float longitude) {
     
     this.longitude = longitude;
     return this;
@@ -121,12 +121,12 @@ public class GuiToServer {
    * @return longitude
   **/
   @javax.annotation.Nullable
-  public Integer getLongitude() {
+  public Float getLongitude() {
     return longitude;
   }
 
 
-  public void setLongitude(Integer longitude) {
+  public void setLongitude(Float longitude) {
     this.longitude = longitude;
   }
 

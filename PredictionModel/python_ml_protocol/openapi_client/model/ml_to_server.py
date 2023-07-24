@@ -39,7 +39,7 @@ class MlToServer(
         
         class properties:
             name = schemas.StrSchema
-            popularity = schemas.IntSchema
+            popularity = schemas.Schema
             __annotations__ = {
                 "name": name,
                 "popularity": popularity,
@@ -76,7 +76,7 @@ class MlToServer(
         cls,
         *_args: typing.Union[dict, frozendict.frozendict, ],
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
-        popularity: typing.Union[MetaOapg.properties.popularity, decimal.Decimal, int, schemas.Unset] = schemas.unset,
+        popularity: typing.Union[MetaOapg.properties.popularity, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
         **kwargs: typing.Union[schemas.AnyTypeSchema, dict, frozendict.frozendict, str, date, datetime, uuid.UUID, int, float, decimal.Decimal, None, list, tuple, bytes],
     ) -> 'MlToServer':
