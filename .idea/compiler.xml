@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-jpa" />
+        <module name="node" />
+        <module name="common-utils" />
+        <module name="rest-service" />
+        <module name="common-rabbitmq" />
+        <module name="dispatcher" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BabushkinPogreb" target="11" />
+      <module name="BabushkinPogreb (1)" target="11" />
+      <module name="BabushkinPogreb (2)" target="11" />
+      <module name="common-jpa" target="11" />
+      <module name="common-jpa (1)" target="11" />
+      <module name="common-jpa (2)" target="11" />
+      <module name="common-rabbitmq" target="11" />
+      <module name="common-rabbitmq (1)" target="11" />
+      <module name="common-rabbitmq (2)" target="11" />
+      <module name="common-utils" target="11" />
+      <module name="common-utils (1)" target="11" />
+      <module name="common-utils (2)" target="11" />
+      <module name="demo" target="17" />
+      <module name="dispatcher" target="11" />
+      <module name="dispatcher (1)" target="11" />
+      <module name="dispatcher (2)" target="11" />
+      <module name="mail-service" target="11" />
+      <module name="mail-service (1)" target="11" />
+      <module name="mail-service (2)" target="11" />
+      <module name="node" target="14" />
+      <module name="node (1)" target="14" />
+      <module name="node (2)" target="11" />
+      <module name="rest-service" target="11" />
+      <module name="rest-service (1)" target="11" />
+      <module name="rest-service (2)" target="11" />
+      <module name="sever" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-jpa" options="-parameters" />
+      <module name="common-jpa (1)" options="-parameters" />
+      <module name="common-rabbitmq" options="-parameters" />
+      <module name="common-rabbitmq (1)" options="-parameters" />
+      <module name="common-utils" options="-parameters" />
+      <module name="common-utils (2)" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="dispatcher" options="-parameters" />
+      <module name="dispatcher (1)" options="-parameters" />
+      <module name="mail-service" options="-parameters" />
+      <module name="mail-service (1)" options="-parameters" />
+      <module name="node" options="-parameters" />
+      <module name="node (1)" options="-parameters" />
+      <module name="rest-service" options="-parameters" />
+      <module name="rest-service (2)" options="-parameters" />
+      <module name="sever" options="" />
+    </option>
+  </component>
+</project>
