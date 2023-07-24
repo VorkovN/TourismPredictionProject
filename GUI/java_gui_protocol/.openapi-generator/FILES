@@ -40,4 +40,3 @@ src/main/java/org/openapitools/client/model/GuiToServer.java
 src/main/java/org/openapitools/client/model/ObjectInfo.java
 src/main/java/org/openapitools/client/model/ServerToGui.java
 src/main/java/org/openapitools/client/model/TourismObjectType.java
-src/test/java/org/openapitools/client/model/TourismObjectTypeTest.java

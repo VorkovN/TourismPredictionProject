@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
 /**
  * Данные подключенных клиентов
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T01:38:38.014693880+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-24T20:57:11.039974107+03:00[Europe/Moscow]")
 public class GuiToServer {
   public static final String SERIALIZED_NAME_TOURISM_OBJECT_TYPE = "tourismObjectType";
   @SerializedName(SERIALIZED_NAME_TOURISM_OBJECT_TYPE)
