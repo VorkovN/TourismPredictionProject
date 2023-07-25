@@ -43,6 +43,28 @@ public class MainServiceImpl extends CommandManager implements MainService {
      */
     private ServerToMl createRequest2Ml(GuiToServer guiToServer){
 
+        ServerToMl serverToMl = ServerToMl.builder()
+                .longitude(guiToServer.getLongitude())
+                .latitude(guiToServer.getLatitude())
+                .coeffNearestPopularity(calculateCoeff())
+                .build();
+
+        var objectType = guiToServer.getTourismObjectType();
+        switch (objectType){
+            case THEATRE -> serverToMl.setTheatre(true);
+            case ETHNICCENTER -> serverToMl.setEthnicCenter(true);
+            case MUSEUM -> serverToMl.setMuseum(true);
+            case CHILDRENSTOURISM -> serverToMl.setChildrensTourism(true);
+            case CITYATTRACTIONS -> serverToMl.setCityAttractions(true);
+            case ATTRACTION -> serverToMl.setAttraction(true);
+            case CULTURALCENTRE -> serverToMl.setCulturalCentre(true);
+            case SHIPBUILDING -> serverToMl.shipbuilding(true);
+            case NATIONALPARK -> serverToMl.setNationalPark(true);
+            case SANATORIUM -> serverToMl.setSanatorium(true);
+            case LOOKOUT -> serverToMl.setLookout(true);
+            case SKIRESORT -> serverToMl.setSkiResort(true);
+        }
+
         var objects =  objectsEntity.getListServer2ml();
         var optinalObject = objects.stream()
                 .filter(e -> e.getLatitude().equals(guiToServer.getLatitude())
@@ -101,9 +123,25 @@ public class MainServiceImpl extends CommandManager implements MainService {
         }
         return nearestHotels;
     }
-    private double calculateDistance(float x1, float y1, float x2, float y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    private float calculateCoeff() {
+        double longitudeTourism = 123;
+        double latitudeTourism = 123;
+        // Assuming 'data' is a collection containing the necessary information.
+        float coeff = 0;
+        for (var a : objectsEntity.getListServer2ml()) {
+            double longitude2 = a.getLongitude();
+            double latitude2 = a.getLatitude();
+            double dist = getDistanceBetweenPointsNew(latitudeTourism, longitudeTourism, latitude2, longitude2);
+
+            double maxDist = 100; // Replace 100 with your desired max distance.
+            if (dist < maxDist) { // то беру координаты обхекта из таблички и названия
+                coeff += a.getCoeffNearestPopularity();
+            }
+        }
+        return coeff;
     }
+
+
 
 //    private ServerToMl fillsNull(GuiToServer guiToServer){
 //        var locs =  objectsEntity.getObjectInfos();
