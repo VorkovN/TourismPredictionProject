@@ -24,16 +24,18 @@ public class MainServiceImpl extends CommandManager implements MainService {
     private final ObjectsEntity objectsEntity;
     @Override
     public void processMessage(GuiToServer guiToServer) {
-
+        log.debug("Object came from GUI : " + guiToServer);
         var serverToMl = createRequest2Ml(guiToServer);
         produceService.produceAnswerToMl(serverToMl);
+        log.debug("Object sended to ML : " + serverToMl);
     }
 
     @Override
     public void processMessage(MlToServer mlToServer) {
-
+        log.debug("Object came from ML : " + mlToServer);
         var server2gui = createResponse2gui(mlToServer);
         produceService.produceAnswerToGui(server2gui);
+        log.debug("Object sended to GUI : " + server2gui);
     }
 
     /**
