@@ -13,37 +13,51 @@
 package ru.relex.models.gui2server;
 
 import java.util.Objects;
+import java.util.Arrays;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-//import com.google.gson.stream.JsonWriter;
-//import io.swagger.client.model.TourismObjectType;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+import java.io.IOException;
 /**
  * Данные подключенных клиентов
  */
 @Schema(description = "Данные подключенных клиентов")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-24T21:35:33.532498505Z[GMT]")
-@Builder
-@Getter
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-25T18:11:42.935552610Z[GMT]")
+@NoArgsConstructor
 public class GuiToServer {
+  @JsonProperty("tourismObjectType")
   @SerializedName("tourismObjectType")
   private String tourismObjectType = null;
 
+  @JsonProperty("latitude")
   @SerializedName("latitude")
   private Float latitude = null;
 
+  @JsonProperty("longitude")
   @SerializedName("longitude")
   private Float longitude = null;
 
+  public GuiToServer tourismObjectType(String tourismObjectType) {
+    this.tourismObjectType = tourismObjectType;
+    return this;
+  }
 
    /**
-   * Get tourismObjectType
+   * Тип туристичекого объекта
    * @return tourismObjectType
   **/
-
+  @Schema(description = "Тип туристичекого объекта")
+  public String getTourismObjectType() {
+    return tourismObjectType;
+  }
 
   public void setTourismObjectType(String tourismObjectType) {
     this.tourismObjectType = tourismObjectType;
@@ -87,7 +101,7 @@ public class GuiToServer {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -115,7 +129,6 @@ public class GuiToServer {
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("}");
-
     return sb.toString();
   }
 
@@ -123,7 +136,7 @@ public class GuiToServer {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

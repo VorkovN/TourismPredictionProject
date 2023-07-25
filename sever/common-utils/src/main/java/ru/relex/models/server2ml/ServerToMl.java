@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 /**
@@ -28,7 +29,7 @@ import java.io.IOException;
  */
 @Schema(description = "Параметры для ML модели от сервера")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-25T01:18:48.012222797Z[GMT]")
-@Builder
+@NoArgsConstructor
 public class ServerToMl {
   @SerializedName("name")
   private String name = null;

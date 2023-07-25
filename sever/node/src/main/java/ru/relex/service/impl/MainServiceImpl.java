@@ -43,11 +43,25 @@ public class MainServiceImpl extends CommandManager implements MainService {
      */
     private ServerToMl createRequest2Ml(GuiToServer guiToServer){
 
-        ServerToMl serverToMl = ServerToMl.builder()
-                .longitude(guiToServer.getLongitude())
-                .latitude(guiToServer.getLatitude())
-                .coeffNearestPopularity(calculateCoeff())
-                .build();
+        ServerToMl serverToMl = new ServerToMl();
+                serverToMl.setLongitude(guiToServer.getLongitude());
+                serverToMl.setLatitude(guiToServer.getLatitude());
+                serverToMl.setCoeffNearestPopularity(calculateCoeff());
+
+
+
+        serverToMl.setTheatre(false);
+        serverToMl.setEthnicCenter(false);
+        serverToMl.setMuseum(false);
+        serverToMl.setChildrensTourism(false);
+        serverToMl.setCityAttractions(false);
+        serverToMl.setAttraction(false);
+        serverToMl.setCulturalCentre(false);
+        serverToMl.shipbuilding(false);
+        serverToMl.setNationalPark(false);
+        serverToMl.setSanatorium(false);
+        serverToMl.setLookout(false);
+        serverToMl.setSkiResort(false);
 
         switch (guiToServer.getTourismObjectType()){
             case "Театр" -> serverToMl.setTheatre(true);
@@ -66,16 +80,7 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
         }
 
-        var objects =  objectsEntity.getListServer2ml();
-        var optinalObject = objects.stream()
-                .filter(e -> e.getLatitude().equals(guiToServer.getLatitude())
-                        && e.getLongitude().equals(guiToServer.getLongitude()))
-                .findFirst();
-        if (optinalObject.isEmpty()) throw new RuntimeException("Object not found : " + guiToServer.toString());
-
-//                .orElse(objects.get(new Random().nextInt(objects.size())));
-        var object = optinalObject.get();
-        return object;
+        return serverToMl;
     }
 
     private ServerToGui createResponse2gui(MlToServer mlToServer){

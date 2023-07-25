@@ -10,7 +10,7 @@ import java.util.Random;
 
 class ReadSpecificValueFromCSV {
     public static void main(String[] args) {
-        String csvFilePath = "sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+        String csvFilePath = "/home/vorkov/Workspace/TourismPredictionProject/sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
         List<ServerToMl> list = new ArrayList<>();
         int targetRow = 5;    // строка
         int targetColumn = 2; // столбец

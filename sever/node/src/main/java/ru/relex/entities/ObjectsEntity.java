@@ -89,30 +89,30 @@ public class ObjectsEntity {
             int currentRow = 0;
             String[] inputLine = reader.readNext();
             while ((inputLine = reader.readNext()) != null) {
-                ServerToMl serverToMl = ServerToMl.builder()
-                        .name(inputLine[0])
-                        .latitude(Float.parseFloat(inputLine[9]))
-                        .longitude(Float.parseFloat(inputLine[3]))
-                        .coeffNearestPopularity(Float.parseFloat(inputLine[22])) // не знаю что
-                        .carAvailability(Boolean.parseBoolean(inputLine[4]))
-                        .busAvailability(Boolean.parseBoolean(inputLine[5]))
-                        .bigCarAvailability(Boolean.parseBoolean(inputLine[6]))
-                        .shipbuilding(Boolean.parseBoolean(inputLine[17]))
-                        .planeAvailability(Boolean.parseBoolean(inputLine[8]))
-                        .theatre(Boolean.parseBoolean(inputLine[10]))
-                        .ethnicCenter(Boolean.parseBoolean(inputLine[11]))
-                        .museum(Boolean.parseBoolean(inputLine[12]))
-                        .childrensTourism(Boolean.parseBoolean(inputLine[13]))
-                        .cityAttractions(Boolean.parseBoolean(inputLine[14]))
-                        .attraction(Boolean.parseBoolean(inputLine[4]))
-                        .culturalCentre(Boolean.parseBoolean(inputLine[16]))
-                        .skiResort(Boolean.parseBoolean(inputLine[21]))
-                        .lookout(Boolean.parseBoolean(inputLine[20]))
-                        .sanatorium(Boolean.parseBoolean(inputLine[19]))
-                        .nationalPark(Boolean.parseBoolean(inputLine[18]))
-                        .shipAvailability(Boolean.parseBoolean(inputLine[7]))
-                        .attraction(Boolean.parseBoolean(inputLine[15]))
-                        .build();
+                ServerToMl serverToMl = new ServerToMl();
+
+                serverToMl.name(inputLine[0]);
+                serverToMl.setLatitude(Float.parseFloat(inputLine[9]));
+                serverToMl.setLongitude(Float.parseFloat(inputLine[3]));
+                serverToMl.setCoeffNearestPopularity(Float.parseFloat(inputLine[22]));
+                serverToMl.setCarAvailability(Boolean.parseBoolean(inputLine[4]));
+                serverToMl.setBusAvailability(Boolean.parseBoolean(inputLine[5]));
+                serverToMl.setBigCarAvailability(Boolean.parseBoolean(inputLine[6]));
+                serverToMl.setShipbuilding(Boolean.parseBoolean(inputLine[17]));
+                serverToMl.setPlaneAvailability(Boolean.parseBoolean(inputLine[8]));
+                serverToMl.setTheatre(Boolean.parseBoolean(inputLine[10]));
+                serverToMl.setEthnicCenter(Boolean.parseBoolean(inputLine[11]));
+                serverToMl.setMuseum(Boolean.parseBoolean(inputLine[12]));
+                serverToMl.setChildrensTourism(Boolean.parseBoolean(inputLine[13]));
+                serverToMl.setCityAttractions(Boolean.parseBoolean(inputLine[14]));
+                serverToMl.setAttraction(Boolean.parseBoolean(inputLine[4]));
+                serverToMl.setCulturalCentre(Boolean.parseBoolean(inputLine[16]));
+                serverToMl.setSkiResort(Boolean.parseBoolean(inputLine[21]));
+                serverToMl.setLookout(Boolean.parseBoolean(inputLine[20]));
+                serverToMl.setSanatorium(Boolean.parseBoolean(inputLine[19]));
+                serverToMl.setNationalPark(Boolean.parseBoolean(inputLine[18]));
+                serverToMl.setShipAvailability(Boolean.parseBoolean(inputLine[7]));
+                serverToMl.setAttraction(Boolean.parseBoolean(inputLine[15]));
                 listServer2ml.add(serverToMl);
                 currentRow++;
             }
