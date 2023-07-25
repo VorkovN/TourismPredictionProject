@@ -1,6 +1,5 @@
 package ru.relex.service.impl;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
 import ru.relex.entities.ObjectsEntity;
@@ -17,16 +16,25 @@ import java.util.*;
 
 @Service
 @Log4j
-@AllArgsConstructor
+
 public class MainServiceImpl extends CommandManager implements MainService {
 
     private final ProduceService produceService;
     private final ObjectsEntity objectsEntity;
-    private Queue<Float[]> queue;
+    private Float mainLat = null;
+    private Float mainLon = null;
+
+    public MainServiceImpl(ProduceService produceService, ObjectsEntity objectsEntity) {
+        this.produceService = produceService;
+        this.objectsEntity = objectsEntity;
+    }
+
+
     @Override
     public void processMessage(GuiToServer guiToServer) {
         log.debug("Object came from GUI : " + guiToServer);
-        queue.add(new Float[]{guiToServer.getLatitude(), guiToServer.getLongitude()});
+        mainLat = guiToServer.getLatitude();
+        mainLon =guiToServer.getLongitude();
         var serverToMl = createRequest2Ml(guiToServer);
         produceService.produceAnswerToMl(serverToMl);
         log.debug("Object sended to ML : " + serverToMl);
@@ -35,8 +43,8 @@ public class MainServiceImpl extends CommandManager implements MainService {
     @Override
     public void processMessage(MlToServer mlToServer) {
         log.debug("Object came from ML : " + mlToServer);
-        if (queue.isEmpty()) {
-            log.error("Inner q is empty");
+        if (mainLon == null || mainLat == null) {
+            log.error("Inner lan or lot is null");
             return;
         }
         var server2gui = createResponse2gui(mlToServer);
@@ -108,18 +116,18 @@ public class MainServiceImpl extends CommandManager implements MainService {
      */
 
     private List<ObjectInfo> findNearestHotels(String nameOfObject, int numOfHotels){
-        var opt = objectsEntity.getListServer2ml().stream()
-                .filter(e -> e.getName().equals(nameOfObject))
-                .findFirst();
-        if (opt.isEmpty()) throw new RuntimeException("Not found object with the same name as : " + nameOfObject);
-        var object = opt.get();
+//        var opt = objectsEntity.getListServer2ml().stream()
+//                .filter(e -> e.getName().equals(nameOfObject))
+//                .findFirst();
+//        if (opt.isEmpty()) throw new RuntimeException("Not found object with the same name as : " + nameOfObject);
+//        var object = opt.get();
 
-        var in = queue.poll();
 
-        float targetLatitude = in[0];
-        float targetLongitude = in[1];
 
-        List<ObjectInfo> nearestHotels = new ArrayList<>();
+        float targetLatitude = mainLat;
+        float targetLongitude = mainLon;
+
+        List<ObjectInfo> nearestHotels = objectsEntity.getListOfHotels();
         // Сортируем дома по расстоянию от целевых координат
         Collections.sort(nearestHotels, new Comparator<ObjectInfo>() {
             @Override
