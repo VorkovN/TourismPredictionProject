@@ -6,6 +6,6 @@ import ru.relex.models.server2ml.ServerToMl;
 
 
 public interface ProduceService {
-    void producerAnswerToGui(ServerToGui messageToGui);
+    void produceAnswerToGui(ServerToGui messageToGui);
     void produceAnswerToMl(ServerToMl serverToMl);
 }

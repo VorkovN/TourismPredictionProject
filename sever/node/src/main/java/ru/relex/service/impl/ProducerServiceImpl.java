@@ -17,7 +17,7 @@ public class ProducerServiceImpl implements ProduceService {
     private final RabbitTemplate rabbitTemplate;
 
     @Override
-    public void producerAnswerToGui(ServerToGui serverToGui) {
+    public void produceAnswerToGui(ServerToGui serverToGui) {
         rabbitTemplate.convertAndSend(SERVER_2_GUI, serverToGui);
     }
 

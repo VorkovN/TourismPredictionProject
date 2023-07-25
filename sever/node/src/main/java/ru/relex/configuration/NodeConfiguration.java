@@ -1,7 +1,5 @@
 package ru.relex.configuration;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 //import ru.relex.utils.CryptoTool;
 
@@ -21,5 +19,9 @@ public class NodeConfiguration {// это как-то связывает со с
 //    @Bean
 //    public Tech getTech(){
 //        return new Tech();
+//    }
+//    @Bean
+//    public NamesLocations getNameLocations(){
+//        return new NamesLocations();
 //    }
 }

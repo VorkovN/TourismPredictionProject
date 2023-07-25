@@ -16,13 +16,15 @@ import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 /**
  * Данные подключенных клиентов
  */
 @Schema(description = "Данные подключенных клиентов")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-24T21:35:33.532498505Z[GMT]")
-
+@Builder
 public class ObjectInfo {
   @SerializedName("name")
   private String name = null;

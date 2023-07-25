@@ -6,10 +6,11 @@ import java.util.List;
 
 public class CommandManager {
     protected void addToList(List<ObjectInfo> list, String name, Float latitude, Float longitude){
-        ObjectInfo objectInfo = new ObjectInfo();
-        objectInfo.setLatitude(latitude);
-        objectInfo.setLongitude(longitude);
-        objectInfo.name(name);
+        ObjectInfo objectInfo = ObjectInfo.builder()
+                .name(name)
+                .latitude(latitude)
+                .longitude(longitude)
+                .build();
         list.add(objectInfo);
     }
 }
