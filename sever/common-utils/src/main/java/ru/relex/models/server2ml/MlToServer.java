@@ -20,13 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.NoArgsConstructor;
+
 import java.io.IOException;
 /**
  * Предсказания ML
  */
 @Schema(description = "Предсказания ML")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-25T01:18:48.012222797Z[GMT]")
-
+@NoArgsConstructor
 public class MlToServer {
   @SerializedName("name")
   private String name = null;// просто название постройки

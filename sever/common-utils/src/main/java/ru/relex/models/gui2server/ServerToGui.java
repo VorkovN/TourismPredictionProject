@@ -18,6 +18,7 @@ import com.google.gson.annotations.SerializedName;
 //import io.swagger.client.model.ObjectInfo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.List;
  */
 @Schema(description = "Статистика от сервера")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-24T21:35:33.532498505Z[GMT]")
-@Builder
+@NoArgsConstructor
 public class ServerToGui {
   @SerializedName("prediction")
   private Integer prediction = null;
