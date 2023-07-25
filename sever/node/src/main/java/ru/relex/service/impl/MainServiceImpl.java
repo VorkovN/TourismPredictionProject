@@ -63,6 +63,8 @@ public class MainServiceImpl extends CommandManager implements MainService {
             case SANATORIUM -> serverToMl.setSanatorium(true);
             case LOOKOUT -> serverToMl.setLookout(true);
             case SKIRESORT -> serverToMl.setSkiResort(true);
+
+
         }
 
         var objects =  objectsEntity.getListServer2ml();
