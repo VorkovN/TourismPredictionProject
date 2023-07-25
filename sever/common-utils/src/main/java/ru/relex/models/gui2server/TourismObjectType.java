@@ -10,11 +10,8 @@
  * Do not edit the class manually.
  */
 
-package ru.relex.models;
+package ru.relex.models.gui2server;
 
-import java.util.Objects;
-import java.util.Arrays;
-import io.swagger.v3.oas.annotations.media.Schema;
 import com.google.gson.annotations.SerializedName;
 import java.io.IOException;
 import com.google.gson.TypeAdapter;

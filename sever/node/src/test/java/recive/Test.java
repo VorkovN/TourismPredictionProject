@@ -1,7 +1,7 @@
 package recive;
 
-import ru.relex.models.GuiToServer;
-import ru.relex.models.TourismObjectType;
+import ru.relex.models.gui2server.GuiToServer;
+import ru.relex.models.gui2server.TourismObjectType;
 
 public class Test {
     public static void main(String[] args) {

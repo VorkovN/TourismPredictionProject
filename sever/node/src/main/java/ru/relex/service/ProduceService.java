@@ -1,11 +1,11 @@
 package ru.relex.service;
 
 //import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import ru.relex.models.GuiToServer;
-import ru.relex.models.ServerToGui;
+import ru.relex.models.gui2server.ServerToGui;
+import ru.relex.models.server2ml.ServerToMl;
 
 
 public interface ProduceService {
-    void producerAnswer(ServerToGui messageToGui);
-
+    void producerAnswerToGui(ServerToGui messageToGui);
+    void produceAnswerToMl(ServerToMl serverToMl);
 }

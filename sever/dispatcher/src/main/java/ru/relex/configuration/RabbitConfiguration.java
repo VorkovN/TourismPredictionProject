@@ -25,4 +25,12 @@ public class RabbitConfiguration {
     public Queue server2qui() {
         return new Queue(SERVER_2_GUI);
     }
+    @Bean
+    public Queue server2ml() {
+        return new Queue(SERVER_2_ML);
+    }
+    @Bean
+    public Queue ml2server() {
+        return new Queue(ML_2_SERVER);
+    }
 }

@@ -1,8 +1,10 @@
 package ru.relex.service;
 
-import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.relex.models.GuiToServer;
+import ru.relex.models.gui2server.GuiToServer;
+import ru.relex.models.server2ml.MlToServer;
+import ru.relex.models.server2ml.ServerToMl;
 
 public interface ConsumerService {
     void consumeGui2Server(GuiToServer guiToServer);
+    void consumeMl2Server(MlToServer mlToServer);
 }

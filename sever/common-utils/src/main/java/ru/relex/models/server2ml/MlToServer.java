@@ -10,7 +10,7 @@
  * Do not edit the class manually.
  */
 
-package ru.relex.models;
+package ru.relex.models.server2ml;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -22,22 +22,19 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Данные подключенных клиентов
+ * Предсказания ML
  */
-@Schema(description = "Данные подключенных клиентов")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-24T21:35:33.532498505Z[GMT]")
+@Schema(description = "Предсказания ML")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-25T01:18:48.012222797Z[GMT]")
 
-public class ObjectInfo {
+public class MlToServer {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("latitude")
-  private Float latitude = null;
+  @SerializedName("popularity")
+  private Float popularity = null;
 
-  @SerializedName("longitude")
-  private Float longitude = null;
-
-  public ObjectInfo name(String name) {
+  public MlToServer name(String name) {
     this.name = name;
     return this;
   }
@@ -55,40 +52,22 @@ public class ObjectInfo {
     this.name = name;
   }
 
-  public ObjectInfo latitude(Float latitude) {
-    this.latitude = latitude;
+  public MlToServer popularity(Float popularity) {
+    this.popularity = popularity;
     return this;
   }
 
    /**
-   * Широта
-   * @return latitude
+   * Ожидаемое кол-во запросов в яндекс за месяц
+   * @return popularity
   **/
-  @Schema(description = "Широта")
-  public Float getLatitude() {
-    return latitude;
+  @Schema(description = "Ожидаемое кол-во запросов в яндекс за месяц")
+  public Float getPopularity() {
+    return popularity;
   }
 
-  public void setLatitude(Float latitude) {
-    this.latitude = latitude;
-  }
-
-  public ObjectInfo longitude(Float longitude) {
-    this.longitude = longitude;
-    return this;
-  }
-
-   /**
-   * Долгота
-   * @return longitude
-  **/
-  @Schema(description = "Долгота")
-  public Float getLongitude() {
-    return longitude;
-  }
-
-  public void setLongitude(Float longitude) {
-    this.longitude = longitude;
+  public void setPopularity(Float popularity) {
+    this.popularity = popularity;
   }
 
 
@@ -100,26 +79,24 @@ public class ObjectInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectInfo objectInfo = (ObjectInfo) o;
-    return Objects.equals(this.name, objectInfo.name) &&
-        Objects.equals(this.latitude, objectInfo.latitude) &&
-        Objects.equals(this.longitude, objectInfo.longitude);
+    MlToServer mlToServer = (MlToServer) o;
+    return Objects.equals(this.name, mlToServer.name) &&
+        Objects.equals(this.popularity, mlToServer.popularity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, latitude, longitude);
+    return Objects.hash(name, popularity);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectInfo {\n");
+    sb.append("class MlToServer {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
-    sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
+    sb.append("    popularity: ").append(toIndentedString(popularity)).append("\n");
     sb.append("}");
     return sb.toString();
   }
