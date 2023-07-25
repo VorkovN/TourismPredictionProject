@@ -29,7 +29,7 @@ import java.io.IOException;
 
 public class MlToServer {
   @SerializedName("name")
-  private String name = null;
+  private String name = null;// просто название постройки
 
   @SerializedName("popularity")
   private Float popularity = null;

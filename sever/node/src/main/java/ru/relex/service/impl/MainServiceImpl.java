@@ -66,7 +66,7 @@ public class MainServiceImpl extends CommandManager implements MainService {
         ServerToGui serverToGui = ServerToGui.builder()
                 .nearestCafe(listOfNearestCafe)
                 .nearestHotels(listOfNearestHotels)
-                .prediction(1)
+                .prediction(Math.round(mlToServer.getPopularity()))
                 .build();
         produceService.producerAnswerToGui(serverToGui);
     }
