@@ -63,7 +63,7 @@ public class ObjectsEntity {
     }
 
     private void initListOfHotels() {
-        String csvFilePath = "sever/common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+        String csvFilePath = "/home/vorkov/Workspace/TourismPredictionProject/sever/common-jpa/src/main/java/ru/relex/csv/hotels.csv";
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             int currentRow = 0;
             String[] inputLine = reader.readNext();
@@ -84,7 +84,7 @@ public class ObjectsEntity {
     }
 
     private void initListServer2ml(){
-        String csvFilePath = "sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+        String csvFilePath = "/home/vorkov/Workspace/TourismPredictionProject/sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             int currentRow = 0;
             String[] inputLine = reader.readNext();
