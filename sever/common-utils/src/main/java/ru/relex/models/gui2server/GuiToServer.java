@@ -19,6 +19,7 @@ import com.google.gson.annotations.SerializedName;
 //import io.swagger.client.model.TourismObjectType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
+import lombok.Getter;
 
 /**
  * Данные подключенных клиентов
@@ -26,9 +27,10 @@ import lombok.Builder;
 @Schema(description = "Данные подключенных клиентов")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2023-07-24T21:35:33.532498505Z[GMT]")
 @Builder
+@Getter
 public class GuiToServer {
   @SerializedName("tourismObjectType")
-  private TourismObjectType tourismObjectType = null;
+  private String tourismObjectType = null;
 
   @SerializedName("latitude")
   private Float latitude = null;
@@ -36,21 +38,14 @@ public class GuiToServer {
   @SerializedName("longitude")
   private Float longitude = null;
 
-  public GuiToServer tourismObjectType(TourismObjectType tourismObjectType) {
-    this.tourismObjectType = tourismObjectType;
-    return this;
-  }
 
    /**
    * Get tourismObjectType
    * @return tourismObjectType
   **/
-  @Schema(description = "")
-  public TourismObjectType getTourismObjectType() {
-    return tourismObjectType;
-  }
 
-  public void setTourismObjectType(TourismObjectType tourismObjectType) {
+
+  public void setTourismObjectType(String tourismObjectType) {
     this.tourismObjectType = tourismObjectType;
   }
 
