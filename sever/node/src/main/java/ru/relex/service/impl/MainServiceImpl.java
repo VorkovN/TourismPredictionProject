@@ -22,9 +22,11 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
     private final ProduceService produceService;
     private final ObjectsEntity objectsEntity;
+    private Queue<Float[]> queue;
     @Override
     public void processMessage(GuiToServer guiToServer) {
         log.debug("Object came from GUI : " + guiToServer);
+        queue.add(new Float[]{guiToServer.getLatitude(), guiToServer.getLongitude()});
         var serverToMl = createRequest2Ml(guiToServer);
         produceService.produceAnswerToMl(serverToMl);
         log.debug("Object sended to ML : " + serverToMl);
@@ -33,6 +35,10 @@ public class MainServiceImpl extends CommandManager implements MainService {
     @Override
     public void processMessage(MlToServer mlToServer) {
         log.debug("Object came from ML : " + mlToServer);
+        if (queue.isEmpty()) {
+            log.error("Inner q is empty");
+            return;
+        }
         var server2gui = createResponse2gui(mlToServer);
         produceService.produceAnswerToGui(server2gui);
         log.debug("Object sended to GUI : " + server2gui);
@@ -83,6 +89,7 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
     private ServerToGui createResponse2gui(MlToServer mlToServer){
         // TODO: 25.07.2023 изменить numOfHotels сдедать зависимотсть от коэффициента ML модели расположения
+
         var nearestHotels = findNearestHotels(mlToServer.getName(), 3);
 
         ServerToGui serverToGui = new ServerToGui();
@@ -107,8 +114,11 @@ public class MainServiceImpl extends CommandManager implements MainService {
         if (opt.isEmpty()) throw new RuntimeException("Not found object with the same name as : " + nameOfObject);
         var object = opt.get();
 
-        float targetLatitude = object.getLatitude();
-        float targetLongitude = object.getLongitude();
+        var in = queue.poll();
+
+        float targetLatitude = in[0];
+        float targetLongitude = in[1];
+
         List<ObjectInfo> nearestHotels = new ArrayList<>();
         // Сортируем дома по расстоянию от целевых координат
         Collections.sort(nearestHotels, new Comparator<ObjectInfo>() {
