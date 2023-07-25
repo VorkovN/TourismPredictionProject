@@ -48,8 +48,6 @@ public class MainServiceImpl extends CommandManager implements MainService {
                 serverToMl.setLatitude(guiToServer.getLatitude());
                 serverToMl.setCoeffNearestPopularity(calculateCoeff());
 
-
-
         serverToMl.setTheatre(false);
         serverToMl.setEthnicCenter(false);
         serverToMl.setMuseum(false);
@@ -63,7 +61,7 @@ public class MainServiceImpl extends CommandManager implements MainService {
         serverToMl.setLookout(false);
         serverToMl.setSkiResort(false);
 
-        switch (guiToServer.getTourismObjectType()){
+        switch (guiToServer.getTourismObjectType()) {
             case "Театр" -> serverToMl.setTheatre(true);
             case "Этнический центр" -> serverToMl.setEthnicCenter(true);
             case "Музей" -> serverToMl.setMuseum(true);
@@ -76,8 +74,6 @@ public class MainServiceImpl extends CommandManager implements MainService {
             case "Санаторий" -> serverToMl.setSanatorium(true);
             case "Обзорная площадка" -> serverToMl.setLookout(true);
             case "Горнолыжный курорт" -> serverToMl.setSkiResort(true);
-
-
         }
 
         return serverToMl;
@@ -87,11 +83,10 @@ public class MainServiceImpl extends CommandManager implements MainService {
         // TODO: 25.07.2023 изменить numOfHotels сдедать зависимотсть от коэффициента ML модели расположения
         var nearestHotels = findNearestHotels(mlToServer.getName(), 3);
 
-        ServerToGui serverToGui = ServerToGui.builder()
-                .prediction(Math.round(mlToServer.getPopularity()))
-                .nearestHotels(nearestHotels)
-                .nearestCafe(objectsEntity.getListOfCafes())
-                .build();
+        ServerToGui serverToGui = new ServerToGui();
+                serverToGui.setPrediction(Math.round(mlToServer.getPopularity()));
+                serverToGui.setNearestHotels(nearestHotels);
+                serverToGui.setNearestCafe(objectsEntity.getListOfCafes());
         return serverToGui;
 
     }
@@ -147,29 +142,4 @@ public class MainServiceImpl extends CommandManager implements MainService {
         return coeff;
     }
 
-
-
-//    private ServerToMl fillsNull(GuiToServer guiToServer){
-//        var locs =  objectsEntity.getObjectInfos();
-//        ServerToMl serverToMl = ServerToMl.builder()
-//                .name(locs.get(new Random().nextInt(locs.size())).getName())
-//                .latitude(guiToServer.getLatitude())
-//                .longitude(guiToServer.getLongitude())
-//                .coeffNearestPopularity(198.80999999999995f)
-//                .carAvailability(new Random().nextBoolean())
-//                .busAvailability(new Random().nextBoolean())
-//                .bigCarAvailability(new Random().nextBoolean())
-//                .shipbuilding(new Random().nextBoolean())
-//                .planeAvailability(new Random().nextBoolean())
-//                .theatre(new Random().nextBoolean())
-//                .ethnicCenter(new Random().nextBoolean())
-//                .museum(new Random().nextBoolean())
-//                .childrensTourism(new Random().nextBoolean())
-//                .cityAttractions(new Random().nextBoolean())
-//                .attraction(new Random().nextBoolean())
-//                .culturalCentre(new Random().nextBoolean())
-//                .shipbuilding(new Random().nextBoolean())
-//                .build();
-//        return serverToMl;
-//    }
 }
