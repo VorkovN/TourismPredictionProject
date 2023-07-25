@@ -49,20 +49,19 @@ public class MainServiceImpl extends CommandManager implements MainService {
                 .coeffNearestPopularity(calculateCoeff())
                 .build();
 
-        var objectType = guiToServer.getTourismObjectType();
-        switch (objectType){
-            case THEATRE -> serverToMl.setTheatre(true);
-            case ETHNICCENTER -> serverToMl.setEthnicCenter(true);
-            case MUSEUM -> serverToMl.setMuseum(true);
-            case CHILDRENSTOURISM -> serverToMl.setChildrensTourism(true);
-            case CITYATTRACTIONS -> serverToMl.setCityAttractions(true);
-            case ATTRACTION -> serverToMl.setAttraction(true);
-            case CULTURALCENTRE -> serverToMl.setCulturalCentre(true);
-            case SHIPBUILDING -> serverToMl.shipbuilding(true);
-            case NATIONALPARK -> serverToMl.setNationalPark(true);
-            case SANATORIUM -> serverToMl.setSanatorium(true);
-            case LOOKOUT -> serverToMl.setLookout(true);
-            case SKIRESORT -> serverToMl.setSkiResort(true);
+        switch (guiToServer.getTourismObjectType()){
+            case "Театр" -> serverToMl.setTheatre(true);
+            case "Этнический центр" -> serverToMl.setEthnicCenter(true);
+            case "Музей" -> serverToMl.setMuseum(true);
+            case "Детский туризм" -> serverToMl.setChildrensTourism(true);
+            case "Городские достопримечательности" -> serverToMl.setCityAttractions(true);
+            case "Достопримечательность" -> serverToMl.setAttraction(true);
+            case "Культурный центр" -> serverToMl.setCulturalCentre(true);
+            case "Судостроение" -> serverToMl.shipbuilding(true);
+            case "Нац. парк" -> serverToMl.setNationalPark(true);
+            case "Санаторий" -> serverToMl.setSanatorium(true);
+            case "Обзорная площадка" -> serverToMl.setLookout(true);
+            case "Горнолыжный курорт" -> serverToMl.setSkiResort(true);
 
 
         }
