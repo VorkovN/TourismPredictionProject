@@ -3,6 +3,7 @@ package ru.relex.entities;
 import com.opencsv.CSVReader;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.relex.models.gui2server.ObjectInfo;
 import ru.relex.models.server2ml.ServerToMl;
@@ -19,13 +20,19 @@ public class ObjectsEntity {
     private final List<ServerToMl> listServer2ml;
     private final List<ObjectInfo> listOfHotels;
     private final List<ObjectInfo> listOfCafes;
+//    @Value("#{T(java.util.regex.Pattern).compile('${service.path.hotels}')}")
+    private final String hotelsPath = "sever/common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+
+//    @Value("#{T(java.util.regex.Pattern).compile('${service.path.tourist-object}')}")
+//@Value("${service.path.tourist-object}")
+    private final String touristObjectPath = "sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+
 
     public ObjectsEntity(){
         listServer2ml = new ArrayList<>();
         listOfHotels = new ArrayList<>();
         listOfCafes = new ArrayList<>();
         init();
-        log.debug("INIT OF BD IS COMPLETED");
     }
 
     private void init(){
@@ -63,7 +70,7 @@ public class ObjectsEntity {
     }
 
     private void initListOfHotels() {
-        String csvFilePath = "/home/vorkov/Workspace/TourismPredictionProject/sever/common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+        String csvFilePath = hotelsPath;
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             int currentRow = 0;
             String[] inputLine = reader.readNext();
@@ -78,13 +85,13 @@ public class ObjectsEntity {
             }
             log.debug("created listOfHotels list : " + listOfHotels.size());
         } catch (Exception e) {
-            log.error("INIT BD FAILED LIST OF HOTELS");
-            e.printStackTrace();
+            log.error("INIT BD FAILED LIST OF HOTELS WITH PATH : " + csvFilePath);
+//            e.printStackTrace();
         }
     }
 
     private void initListServer2ml(){
-        String csvFilePath = "/home/vorkov/Workspace/TourismPredictionProject/sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+        String csvFilePath = touristObjectPath;
         try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
             int currentRow = 0;
             String[] inputLine = reader.readNext();
@@ -118,8 +125,8 @@ public class ObjectsEntity {
             }
             log.debug("created ServerToMl list : " + listServer2ml.size());
         } catch (Exception e) {
-            log.error("INIT BD FAILED Server2ml");
-            e.printStackTrace();
+            log.error("INIT BD FAILED Server2ml WITH PATH : " + csvFilePath);
+//            e.printStackTrace();
         }
     }
 }
