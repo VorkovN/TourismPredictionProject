@@ -82,3 +82,6 @@
 2023-07-25 21:38:46 DEBUG ObjectsEntity:119 - created ServerToMl list : 107
 2023-07-25 21:38:46 DEBUG ObjectsEntity:79 - created listOfHotels list : 144
 2023-07-25 21:38:46 DEBUG ObjectsEntity:28 - INIT OF BD IS COMPLETED
+2023-08-08 16:56:44 ERROR ObjectsEntity:126 - INIT BD FAILED Server2ml WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv
+2023-08-08 16:56:44 ERROR ObjectsEntity:86 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv
+2023-08-08 16:56:44 ERROR ObjectsEntity:65 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv

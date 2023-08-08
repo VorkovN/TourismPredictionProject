@@ -43,9 +43,13 @@ public class MainServiceImpl extends CommandManager implements MainService {
     @Override
     public void processMessage(MlToServer mlToServer) {
         log.debug("Object came from ML : " + mlToServer);
-        var server2gui = createResponse2gui(mlToServer);
-        produceService.produceAnswerToGui(server2gui);
-        log.debug("Object sended to GUI : " + server2gui);
+        try {
+            var server2gui = createResponse2gui(mlToServer);
+            produceService.produceAnswerToGui(server2gui);
+            log.debug("Object sended to GUI : " + server2gui);
+        } catch (Exception e){
+            log.error(e.getMessage());
+        }
     }
 
     /**

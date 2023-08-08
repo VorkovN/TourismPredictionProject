@@ -22,11 +22,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.telegram</groupId>
-			<artifactId>telegrambots-spring-boot-starter</artifactId>
-			<version>${telegrambot.starter.version}</version>
-		</dependency>
 
 		<dependency>
 			<groupId>ru.relex</groupId>
