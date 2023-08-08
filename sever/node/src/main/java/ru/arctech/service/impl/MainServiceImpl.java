@@ -96,8 +96,10 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
         ServerToGui serverToGui = new ServerToGui();
         serverToGui.setPrediction(Math.round(mlToServer.getPopularity()));
-        serverToGui.setNearestHotels(findNearestHotels(3));
-        serverToGui.setNearestCafe(findNearestCafes(3));
+        if (mainQueue.isEmpty()) throw new RuntimeException("Queue is empty");
+        var cor = mainQueue.poll();
+        serverToGui.setNearestHotels(findNearestHotels(3, cor));
+        serverToGui.setNearestCafe(findNearestCafes(3, cor));
         return serverToGui;
 
     }
@@ -108,11 +110,9 @@ public class MainServiceImpl extends CommandManager implements MainService {
      * @return  List<ObjectInfo> близжайших к точке имени объекта
      */
 
-    private List<ObjectInfo> findNearestObjects(int countObjects, List<ObjectInfo> listOfHotelsOrCafes){
-        if (mainQueue.isEmpty()) throw new RuntimeException("Queue is empty");
-        var cor = mainQueue.poll();
-        float targetLatitude = cor.getLat();
-        float targetLongitude = cor.getLon();
+    private List<ObjectInfo> findNearestObjects(int countObjects, List<ObjectInfo> listOfHotelsOrCafes, Coordinates coordinates){
+        float targetLatitude = coordinates.getLat();
+        float targetLongitude = coordinates.getLon();
 
         // Сортируем дома по расстоянию от целевых координат
         Collections.sort(listOfHotelsOrCafes, new Comparator<ObjectInfo>() {
@@ -130,13 +130,13 @@ public class MainServiceImpl extends CommandManager implements MainService {
         }
         return listOfHotelsOrCafes;
     }
-    private List<ObjectInfo> findNearestHotels(int count){
+    private List<ObjectInfo> findNearestHotels(int count, Coordinates coordinates){
         List<ObjectInfo> nearestHotels = objectsEntity.getListOfHotels();
-        return findNearestObjects(count, nearestHotels);
+        return findNearestObjects(count, nearestHotels, coordinates);
     }
-    private List<ObjectInfo> findNearestCafes(int count){
+    private List<ObjectInfo> findNearestCafes(int count, Coordinates coordinates){
         List<ObjectInfo> nearestCafes = objectsEntity.getListOfCafes();
-        return findNearestObjects(count, nearestCafes);
+        return findNearestObjects(count, nearestCafes, coordinates);
     }
     private float calculateCoeff() {
         double longitudeTourism = 123;
@@ -155,5 +155,4 @@ public class MainServiceImpl extends CommandManager implements MainService {
         }
         return coeff;
     }
-
 }
