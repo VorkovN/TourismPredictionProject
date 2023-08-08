@@ -26,6 +26,7 @@ public class ObjectsEntity {
 //    @Value("#{T(java.util.regex.Pattern).compile('${service.path.tourist-object}')}")
 //@Value("${service.path.tourist-object}")
     private final String touristObjectPath = "sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+    private final String cafesObjectPath = "sever/common-jpa/src/main/java/ru/relex/csv/cafes.csv";
 
 
     public ObjectsEntity(){
@@ -39,34 +40,28 @@ public class ObjectsEntity {
         initListServer2ml();
         initListOfHotels();
         initListOfCafes();
+        System.out.println();
     }
 
     private void initListOfCafes() {
-
-        Random random = new Random();
-        float minLat = 38f;
-        float maxLat = 41f;
-        float minLon = 61f;
-        float maxLon = 64f;
-
-        ObjectInfo objectInfo = ObjectInfo.builder()
-                .name("Покушай, а то будешь голоден")
-                .longitude(minLon + random.nextFloat() * (maxLon - minLon))
-                .latitude(minLat + random.nextFloat() * (maxLat - minLat))
-                .build();
-        listOfCafes.add(objectInfo);
-        objectInfo = ObjectInfo.builder()
-                .name("Ешь пей веселись")
-                .longitude(minLon + random.nextFloat() * (maxLon - minLon))
-                .latitude(minLat + random.nextFloat() * (maxLat - minLat))
-                .build();
-        listOfCafes.add(objectInfo);
-        objectInfo = ObjectInfo.builder()
-                .name("Шаверма")
-                .longitude(minLon + random.nextFloat() * (maxLon - minLon))
-                .latitude(minLat + random.nextFloat() * (maxLat - minLat))
-                .build();
-        listOfCafes.add(objectInfo);
+        String csvFilePath = cafesObjectPath;
+        try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
+            int currentRow = 0;
+            String[] inputLine = reader.readNext();
+            while ((inputLine = reader.readNext()) != null) {
+                ObjectInfo objectInfo = ObjectInfo.builder()
+                        .latitude(Float.parseFloat(inputLine[2]))
+                        .longitude(Float.parseFloat(inputLine[1]))
+                        .name(inputLine[0])
+                        .build();
+                listOfCafes.add(objectInfo);
+                currentRow++;
+            }
+            log.debug("created listOfCafes list : " + listOfCafes.size());
+        } catch (Exception e) {
+            log.error("INIT BD FAILED LIST OF HOTELS WITH PATH : " + csvFilePath);
+//            e.printStackTrace();
+        }
     }
 
     private void initListOfHotels() {
