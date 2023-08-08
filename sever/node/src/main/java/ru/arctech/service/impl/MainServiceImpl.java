@@ -1,16 +1,16 @@
-package ru.relex.service.impl;
+package ru.arctech.service.impl;
 
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
-import ru.relex.entities.ObjectsEntity;
+import ru.arctech.entities.ObjectsEntity;
+import ru.arctech.service.CommandManager;
+import ru.arctech.service.MainService;
+import ru.arctech.service.ProduceService;
 import ru.relex.models.gui2server.GuiToServer;
 import ru.relex.models.gui2server.ObjectInfo;
 import ru.relex.models.gui2server.ServerToGui;
 import ru.relex.models.server2ml.MlToServer;
 import ru.relex.models.server2ml.ServerToMl;
-import ru.relex.service.CommandManager;
-import ru.relex.service.MainService;
-import ru.relex.service.ProduceService;
 
 import java.util.*;
 
@@ -21,7 +21,7 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
     private final ProduceService produceService;
     private final ObjectsEntity objectsEntity;
-    private Float mainLat = null;
+    private Float mainLat = null; // TODO: 27.07.2023 нужно переделать в очередь
     private Float mainLon = null;
 
     public MainServiceImpl(ProduceService produceService, ObjectsEntity objectsEntity) {

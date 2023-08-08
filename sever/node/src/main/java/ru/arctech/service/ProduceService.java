@@ -1,4 +1,4 @@
-package ru.relex.service;
+package ru.arctech.service;
 
 //import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import ru.relex.models.gui2server.ServerToGui;

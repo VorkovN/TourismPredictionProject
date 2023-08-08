@@ -1,4 +1,4 @@
-package ru.relex.configuration;
+package ru.arctech.configuration;
 
 import org.springframework.context.annotation.Configuration;
 //import ru.relex.utils.CryptoTool;

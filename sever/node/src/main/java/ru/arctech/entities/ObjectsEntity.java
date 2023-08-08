@@ -1,4 +1,4 @@
-package ru.relex.entities;
+package ru.arctech.entities;
 
 import com.opencsv.CSVReader;
 import lombok.Getter;

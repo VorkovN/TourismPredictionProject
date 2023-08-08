@@ -1,4 +1,4 @@
-package ru.relex.configuration;
+package ru.arctech.configuration;
 
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;

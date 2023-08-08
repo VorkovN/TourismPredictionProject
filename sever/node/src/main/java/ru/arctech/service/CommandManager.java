@@ -1,4 +1,4 @@
-package ru.relex.service;
+package ru.arctech.service;
 
 import ru.relex.models.gui2server.ObjectInfo;
 
