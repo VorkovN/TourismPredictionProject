@@ -3,43 +3,43 @@ package ru.arctech.service.impl;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
 import ru.arctech.entities.Coordinates;
-import ru.arctech.entities.ObjectsEntity;
-import ru.arctech.service.CommandManager;
+import ru.arctech.utils.CommandManager;
 import ru.arctech.service.MainService;
 import ru.arctech.service.ProduceService;
 import ru.relex.models.gui2server.GuiToServer;
-import ru.relex.models.gui2server.ObjectInfo;
 import ru.relex.models.gui2server.ServerToGui;
 import ru.relex.models.server2ml.MlToServer;
 import ru.relex.models.server2ml.ServerToMl;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 @Log4j
-
-public class MainServiceImpl extends CommandManager implements MainService {
+public class MainServiceImpl implements MainService {
 
     private final ProduceService produceService;
-    private final ObjectsEntity objectsEntity;
-    private Queue<Coordinates> mainQueue = new LinkedList<>();
+    private final CommandManager commandManager;
 
-    public MainServiceImpl(ProduceService produceService, ObjectsEntity objectsEntity) {
+//    private Coordinates mainCor = new Coordinates(0f, 0f);
+    private Map<String, Coordinates> map = new HashMap<>();
+
+    public MainServiceImpl(ProduceService produceService, CommandManager commandManager) {
         this.produceService = produceService;
-        this.objectsEntity = objectsEntity;
+        this.commandManager = commandManager;
     }
 
 
+    // to ML
     @Override
     public void processMessage(GuiToServer guiToServer) {
         log.debug("Object came from GUI : " + guiToServer);
-        var cor = new Coordinates(guiToServer.getLatitude(), guiToServer.getLongitude());
-        mainQueue.offer(cor);
+//        mainCor = new Coordinates(guiToServer.getLatitude(), guiToServer.getLongitude());
         var serverToMl = createRequest2Ml(guiToServer);
         produceService.produceAnswerToMl(serverToMl);
         log.debug("Object sended to ML : " + serverToMl);
     }
-
+    // to GUI
     @Override
     public void processMessage(MlToServer mlToServer) {
         log.debug("Object came from ML : " + mlToServer);
@@ -62,20 +62,8 @@ public class MainServiceImpl extends CommandManager implements MainService {
         ServerToMl serverToMl = new ServerToMl();
                 serverToMl.setLongitude(guiToServer.getLongitude());
                 serverToMl.setLatitude(guiToServer.getLatitude());
-                serverToMl.setCoeffNearestPopularity(calculateCoeff());
-
-        serverToMl.setTheatre(false);
-        serverToMl.setEthnicCenter(false);
-        serverToMl.setMuseum(false);
-        serverToMl.setChildrensTourism(false);
-        serverToMl.setCityAttractions(false);
-        serverToMl.setAttraction(false);
-        serverToMl.setCulturalCentre(false);
-        serverToMl.shipbuilding(false);
-        serverToMl.setNationalPark(false);
-        serverToMl.setSanatorium(false);
-        serverToMl.setLookout(false);
-        serverToMl.setSkiResort(false);
+                serverToMl.setName(setCoordinatesRequest(guiToServer));
+                serverToMl.setCoeffNearestPopularity(commandManager.calculateCoeff(guiToServer.getLatitude(), guiToServer.getLongitude()));
 
         switch (guiToServer.getTourismObjectType()) {
             case "Театр" -> serverToMl.setTheatre(true);
@@ -100,63 +88,21 @@ public class MainServiceImpl extends CommandManager implements MainService {
 
         ServerToGui serverToGui = new ServerToGui();
         serverToGui.setPrediction(Math.round(mlToServer.getPopularity()));
-        if (mainQueue.isEmpty()) throw new RuntimeException("Queue is empty");
-        var cor = mainQueue.poll();
-        serverToGui.setNearestHotels(findNearestHotels(3, cor));
-        serverToGui.setNearestCafe(findNearestCafes(3, cor));
+//        if (mainCor.isEmpty()) throw new RuntimeException("Queue is empty");
+        var cor = getCoordinatesRequest(mlToServer);
+        serverToGui.setNearestHotels(commandManager.findNearestHotels( cor));
+        serverToGui.setNearestCafe(commandManager.findNearestCafes( cor));
         return serverToGui;
 
     }
-
-    /**
-     * Суть заключается в том, чтобы выдать близжайшие возможные объекты,
-     * @param countObjects количество выдаваемых объектов
-     * @return  List<ObjectInfo> близжайших к точке имени объекта
-     */
-
-    private List<ObjectInfo> findNearestObjects(int countObjects, List<ObjectInfo> listOfHotelsOrCafes, Coordinates coordinates){
-        float targetLatitude = coordinates.getLat();
-        float targetLongitude = coordinates.getLon();
-
-        // Сортируем дома по расстоянию от целевых координат
-        Collections.sort(listOfHotelsOrCafes, new Comparator<ObjectInfo>() {
-            @Override
-            public int compare(ObjectInfo h1, ObjectInfo h2) {
-                double distance1 = calculateDistance(targetLatitude, targetLongitude, h1.getLatitude(), h1.getLongitude());
-                double distance2 = calculateDistance(targetLatitude, targetLongitude, h2.getLatitude(), h2.getLongitude());
-                return Double.compare(distance1, distance2);
-            }
-        });
-
-        // Оставляем только указанное количество ближайших отелей
-        if (listOfHotelsOrCafes.size() > countObjects) {
-            listOfHotelsOrCafes = listOfHotelsOrCafes.subList(0, countObjects);
-        }
-        return listOfHotelsOrCafes;
+    private String setCoordinatesRequest(GuiToServer guiToServer){
+        var name = String.format("%s/%s/%s", guiToServer.getLatitude(), guiToServer.getLongitude(), guiToServer.getTourismObjectType());
+        map.put(name, new Coordinates(guiToServer.getLatitude(), guiToServer.getLongitude()));
+        return name;
     }
-    private List<ObjectInfo> findNearestHotels(int count, Coordinates coordinates){
-        List<ObjectInfo> nearestHotels = objectsEntity.getListOfHotels();
-        return findNearestObjects(count, nearestHotels, coordinates);
+    private Coordinates getCoordinatesRequest(MlToServer ml){
+        var cor = map.remove(ml.getName());
+        return cor;
     }
-    private List<ObjectInfo> findNearestCafes(int count, Coordinates coordinates){
-        List<ObjectInfo> nearestCafes = objectsEntity.getListOfCafes();
-        return findNearestObjects(count, nearestCafes, coordinates);
-    }
-    private float calculateCoeff() {
-        double longitudeTourism = 123;
-        double latitudeTourism = 123;
-        // Assuming 'data' is a collection containing the necessary information.
-        float coeff = 0;
-        for (var a : objectsEntity.getListServer2ml()) {
-            double longitude2 = a.getLongitude();
-            double latitude2 = a.getLatitude();
-            double dist = getDistanceBetweenPointsNew(latitudeTourism, longitudeTourism, latitude2, longitude2);
 
-            double maxDist = 100; // Replace 100 with your desired max distance.
-            if (dist < maxDist) { // то беру координаты обхекта из таблички и названия
-                coeff += a.getCoeffNearestPopularity();
-            }
-        }
-        return coeff;
-    }
 }

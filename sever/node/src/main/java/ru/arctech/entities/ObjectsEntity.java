@@ -20,16 +20,14 @@ public class ObjectsEntity {
     private final List<ServerToMl> listServer2ml;
     private final List<ObjectInfo> listOfHotels;
     private final List<ObjectInfo> listOfCafes;
-//    @Value("#{T(java.util.regex.Pattern).compile('${service.path.hotels}')}")
-//    private final String hotelsPath = "sever/common-jpa/src/main/java/ru/relex/csv/hotels.csv";
-    private final String hotelsPath = "../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv";
 
-//    @Value("#{T(java.util.regex.Pattern).compile('${service.path.tourist-object}')}")
-//@Value("${service.path.tourist-object}")
-    private final String touristObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
-//    private final String touristObjectPath = "sever/common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
-//    private final String cafesObjectPath = "sever/common-jpa/src/main/java/ru/relex/csv/cafes.csv";
-    private final String cafesObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv";
+//    private final String hotelsPath = "../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+//    private final String touristObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+//    private final String cafesObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv";
+
+    private final String hotelsPath = "common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+    private final String touristObjectPath = "common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+    private final String cafesObjectPath = "common-jpa/src/main/java/ru/relex/csv/cafes.csv";
 
 
     public ObjectsEntity(){

@@ -44,55 +44,55 @@ public class ServerToMl {
   private Float coeffNearestPopularity = null;
 
   @SerializedName("carAvailability")
-  private Boolean carAvailability = null;
+  private Boolean carAvailability = false;
 
   @SerializedName("busAvailability")
-  private Boolean busAvailability = null;
+  private Boolean busAvailability = false;
 
   @SerializedName("bigCarAvailability")
-  private Boolean bigCarAvailability = null;
+  private Boolean bigCarAvailability = false;
 
   @SerializedName("shipAvailability")
-  private Boolean shipAvailability = null;
+  private Boolean shipAvailability = false;
 
   @SerializedName("planeAvailability")
-  private Boolean planeAvailability = null;
+  private Boolean planeAvailability = false;
 
   @SerializedName("theatre")
-  private Boolean theatre = null;
+  private Boolean theatre = false;
 
   @SerializedName("ethnicCenter")
-  private Boolean ethnicCenter = null;
+  private Boolean ethnicCenter = false;
 
   @SerializedName("museum")
-  private Boolean museum = null;
+  private Boolean museum = false;
 
   @SerializedName("childrensTourism")
-  private Boolean childrensTourism = null;
+  private Boolean childrensTourism = false;
 
   @SerializedName("cityAttractions")
-  private Boolean cityAttractions = null;
+  private Boolean cityAttractions = false;
 
   @SerializedName("attraction")
-  private Boolean attraction = null;
+  private Boolean attraction = false;
 
   @SerializedName("culturalCentre")
-  private Boolean culturalCentre = null;
+  private Boolean culturalCentre = false;
 
   @SerializedName("shipbuilding")
-  private Boolean shipbuilding = null;
+  private Boolean shipbuilding = false;
 
   @SerializedName("nationalPark")
-  private Boolean nationalPark = null;
+  private Boolean nationalPark = false;
 
   @SerializedName("sanatorium")
-  private Boolean sanatorium = null;
+  private Boolean sanatorium = false;
 
   @SerializedName("lookout")
-  private Boolean lookout = null;
+  private Boolean lookout = false;
 
   @SerializedName("skiResort")
-  private Boolean skiResort = null;
+  private Boolean skiResort = false;
 
   public ServerToMl name(String name) {
     this.name = name;
