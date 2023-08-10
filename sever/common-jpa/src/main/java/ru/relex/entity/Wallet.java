@@ -1,20 +1,21 @@
 package ru.relex.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.io.Serializable;
 
 @Entity
 @Data
+@Getter
+@Setter
+@EqualsAndHashCode(exclude = "id")
 @NoArgsConstructor
-public class Wallet {
+@Table(name = "wallet")
+public class Wallet implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Builder.Default
-    private Long balance = 0L;
+//    @Builder.Default
+    private Long balance;
 }
