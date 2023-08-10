@@ -21,13 +21,13 @@ public class ObjectsEntity {
     private final List<ObjectInfo> listOfHotels;
     private final List<ObjectInfo> listOfCafes;
 
-//    private final String hotelsPath = "../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv";
-//    private final String touristObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
-//    private final String cafesObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv";
-
-    private final String hotelsPath = "common-jpa/src/main/java/ru/relex/csv/hotels.csv";
-    private final String touristObjectPath = "common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
-    private final String cafesObjectPath = "common-jpa/src/main/java/ru/relex/csv/cafes.csv";
+    private final String hotelsPath = "../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+    private final String touristObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+    private final String cafesObjectPath = "../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv";
+//
+//    private final String hotelsPath = "common-jpa/src/main/java/ru/relex/csv/hotels.csv";
+//    private final String touristObjectPath = "common-jpa/src/main/java/ru/relex/csv/touristObjects.csv";
+//    private final String cafesObjectPath = "common-jpa/src/main/java/ru/relex/csv/cafes.csv";
 
 
     public ObjectsEntity(){
@@ -41,7 +41,7 @@ public class ObjectsEntity {
         initListServer2ml();
         initListOfHotels();
         initListOfCafes();
-        System.out.println();
+        log.debug("VERSION OF SERVER IS 2");
     }
 
     private void initListOfCafes() {

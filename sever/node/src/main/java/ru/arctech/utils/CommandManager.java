@@ -48,7 +48,7 @@ public class CommandManager {
     // Define the remaining helper methods here.
 
     private List<ObjectInfo> findObjectsInRadius(List<ObjectInfo> listOfObjects, Coordinates coordinates) {
-        double radiusKm = radiusOfSearch;
+        double radiusKm = radiusOfSearch == null ? 50 : radiusOfSearch;
         float targetLatitude = coordinates.getLat();
         float targetLongitude = coordinates.getLon();
 

@@ -34,10 +34,18 @@ public class MainServiceImpl implements MainService {
     @Override
     public void processMessage(GuiToServer guiToServer) {
         log.debug("Object came from GUI : " + guiToServer);
+        try {
+            if (checkGui2Server(guiToServer)) {
+                log.warn("Message didn't send to ML cause for one of the args 'null' : " + guiToServer);
+                return;
+            }
 //        mainCor = new Coordinates(guiToServer.getLatitude(), guiToServer.getLongitude());
-        var serverToMl = createRequest2Ml(guiToServer);
-        produceService.produceAnswerToMl(serverToMl);
-        log.debug("Object sended to ML : " + serverToMl);
+            var serverToMl = createRequest2Ml(guiToServer);
+            produceService.produceAnswerToMl(serverToMl);
+            log.debug("Object sended to ML : " + serverToMl);
+        }catch (Exception e){
+            log.error("Fail to send message to ML : \n" + e.getMessage());
+        }
     }
     // to GUI
     @Override
@@ -48,7 +56,7 @@ public class MainServiceImpl implements MainService {
             produceService.produceAnswerToGui(server2gui);
             log.debug("Object sended to GUI : " + server2gui);
         } catch (Exception e){
-            log.error(e.getMessage());
+            log.error("Fail to send message to GUI : \n" + e.getMessage());
         }
     }
 
@@ -104,5 +112,11 @@ public class MainServiceImpl implements MainService {
         var cor = map.remove(ml.getName());
         return cor;
     }
+    private boolean checkGui2Server(GuiToServer guiToServer){
+        return guiToServer.getTourismObjectType() == null || guiToServer.getTourismObjectType().isEmpty()
+                || guiToServer.getLongitude() == null || guiToServer.getLatitude() == null;
+    }
+
+
 
 }

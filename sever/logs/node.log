@@ -7782,3 +7782,766 @@
     nearestHotels: []
     nearestCafe: []
 }
+2023-08-10 22:25:19 DEBUG ObjectsEntity:122 - created ServerToMl list : 107
+2023-08-10 22:25:19 DEBUG ObjectsEntity:82 - created listOfHotels list : 144
+2023-08-10 22:25:19 DEBUG ObjectsEntity:61 - created listOfCafes list : 1111
+2023-08-10 22:26:02 DEBUG ObjectsEntity:122 - created ServerToMl list : 107
+2023-08-10 22:26:02 DEBUG ObjectsEntity:82 - created listOfHotels list : 144
+2023-08-10 22:26:02 DEBUG ObjectsEntity:61 - created listOfCafes list : 1111
+2023-08-10 22:26:04 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 WARN  MainServiceImpl:38 - 'null' input for one of the args : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 WARN  MainServiceImpl:38 - 'null' input for one of the args : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 WARN  MainServiceImpl:38 - 'null' input for one of the args : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:26:04 WARN  MainServiceImpl:38 - 'null' input for one of the args : class GuiToServer {
+    tourismObjectType: 
+    latitude: null
+    longitude: null
+}
+2023-08-10 22:35:00 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.2
+    longitude: 55.3
+}
+2023-08-10 22:35:04 DEBUG MainServiceImpl:44 - Object sended to ML : class ServerToMl {
+    name: 64.2/55.3/Театр
+    latitude: 64.2
+    longitude: 55.3
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:35:38 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.2
+    longitude: 52.3
+}
+2023-08-10 22:35:38 DEBUG MainServiceImpl:44 - Object sended to ML : class ServerToMl {
+    name: 64.2/52.3/Театр
+    latitude: 64.2
+    longitude: 52.3
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:35:40 DEBUG MainServiceImpl:49 - Object came from ML : class MlToServer {
+    name: 64.2/52.3/Театр
+    popularity: 2941.2363
+}
+2023-08-10 22:35:40 DEBUG MainServiceImpl:53 - Object sended to GUI : class ServerToGui {
+    prediction: 2941
+    nearestHotels: []
+    nearestCafe: []
+}
+2023-08-10 22:35:44 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.3
+    longitude: 52.3
+}
+2023-08-10 22:35:44 DEBUG MainServiceImpl:44 - Object sended to ML : class ServerToMl {
+    name: 64.3/52.3/Театр
+    latitude: 64.3
+    longitude: 52.3
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:35:44 DEBUG MainServiceImpl:49 - Object came from ML : class MlToServer {
+    name: 64.3/52.3/Театр
+    popularity: 2933.4546
+}
+2023-08-10 22:35:44 DEBUG MainServiceImpl:53 - Object sended to GUI : class ServerToGui {
+    prediction: 2933
+    nearestHotels: []
+    nearestCafe: []
+}
+2023-08-10 22:37:58 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.4
+    longitude: 43.3
+}
+2023-08-10 22:37:58 DEBUG MainServiceImpl:44 - Object sended to ML : class ServerToMl {
+    name: 64.4/43.3/Театр
+    latitude: 64.4
+    longitude: 43.3
+    coeffNearestPopularity: 16846.5
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:41:20 DEBUG ObjectsEntity:122 - created ServerToMl list : 107
+2023-08-10 22:41:20 DEBUG ObjectsEntity:82 - created listOfHotels list : 144
+2023-08-10 22:41:20 DEBUG ObjectsEntity:61 - created listOfCafes list : 1111
+2023-08-10 22:41:26 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.4
+    longitude: null
+}
+2023-08-10 22:41:26 WARN  MainServiceImpl:39 - 'null' input for one of the args : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.4
+    longitude: null
+}
+2023-08-10 22:43:03 DEBUG ObjectsEntity:122 - created ServerToMl list : 107
+2023-08-10 22:43:03 DEBUG ObjectsEntity:82 - created listOfHotels list : 144
+2023-08-10 22:43:03 DEBUG ObjectsEntity:61 - created listOfCafes list : 1111
+2023-08-10 22:43:16 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 64.4
+    longitude: null
+}
+2023-08-10 22:43:16 WARN  MainServiceImpl:39 - Message didn't send to ML cause for one of the args 'null' : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 64.4
+    longitude: null
+}
+2023-08-10 22:43:26 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 64.4
+    longitude: 43.2
+}
+2023-08-10 22:43:26 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 64.4/43.2/Театс
+    latitude: 64.4
+    longitude: 43.2
+    coeffNearestPopularity: 16846.5
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:43:44 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 64.4
+    longitude: 43.2
+}
+2023-08-10 22:43:44 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 64.4/43.2/Театс
+    latitude: 64.4
+    longitude: 43.2
+    coeffNearestPopularity: 16846.5
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:43:46 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 64.4
+    longitude: 43.2
+}
+2023-08-10 22:43:46 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 64.4/43.2/Театс
+    latitude: 64.4
+    longitude: 43.2
+    coeffNearestPopularity: 16846.5
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:43:47 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 64.4/43.2/Театс
+    popularity: 3107.7202
+}
+2023-08-10 22:43:47 DEBUG MainServiceImpl:57 - Object sended to GUI : class ServerToGui {
+    prediction: 3108
+    nearestHotels: [class ObjectInfo {
+        name: Гостиница «Семейная» «Голубино»  ООО «Голубино»
+        latitude: 17.95
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Корпус «Пансион»  «Лесной отель «Голубино» ООО «Голубино»
+        latitude: 17.95
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Отель «Лесной отель «Голубино»  ООО «Голубино»
+        latitude: 17.95
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Гостиница Пинежского ОП ООО ПКП «ТИТАН»
+        latitude: 34.39
+        longitude: 0.0
+    }]
+    nearestCafe: [class ObjectInfo {
+        name: У Валентины, 11А-004, Leunovo, Arkhangelsk Oblast, Russia, 164563
+        latitude: 31.0
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Столовая, улица Кудрина 54, Pinega, Arkhangelsk Oblast, Russia
+        latitude: 34.3
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Кафе у Володина, Первомайская улица, Pinega, Arkhangelsk Oblast, Russia
+        latitude: 34.41
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Кафе-Столовая, Советская улица, Belogorskiy, Arkhangelsk Oblast, Russia, 164563
+        latitude: 48.14
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Провинция, 11А-004, Arkhangelsk Oblast, Russia, 164563
+        latitude: 48.75
+        longitude: 0.0
+    }]
+}
+2023-08-10 22:43:47 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 64.4/43.2/Театс
+    popularity: 3107.7202
+}
+2023-08-10 22:43:47 ERROR MainServiceImpl:59 - Fail to send message to GUI : 
+Cannot invoke "ru.arctech.entities.Coordinates.getLat()" because "coordinates" is null
+2023-08-10 22:46:35 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 62.4
+    longitude: 43.2
+}
+2023-08-10 22:46:35 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.4/43.2/Театс
+    latitude: 62.4
+    longitude: 43.2
+    coeffNearestPopularity: 150.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:46:40 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театс
+    latitude: 62.34
+    longitude: 43.2
+}
+2023-08-10 22:46:40 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.34/43.2/Театс
+    latitude: 62.34
+    longitude: 43.2
+    coeffNearestPopularity: 150.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:46:43 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 62.34/43.2/Театс
+    popularity: 1850.1868
+}
+2023-08-10 22:46:43 DEBUG MainServiceImpl:57 - Object sended to GUI : class ServerToGui {
+    prediction: 1850
+    nearestHotels: []
+    nearestCafe: [class ObjectInfo {
+        name: улица Мира 1Б, Shegovary, Arkhangelsk Oblast, Russia
+        latitude: 13.5
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Красноармейская улица 15Б, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 29.96
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: улица Ломоносова, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.23
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Визит, улица К.Либкнехта 9А, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.44
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Вечернее, улица Ленина 20, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.45
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Околица, 11А, Ust'-Vaga, Виноградовский муниципальный округ, Russia
+        latitude: 47.77
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Набережная улица, Shelashsky, Arkhangelsk Oblast, Russia
+        latitude: 48.99
+        longitude: 0.0
+    }]
+}
+2023-08-10 22:46:45 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 62.34
+    longitude: 43.2
+}
+2023-08-10 22:46:45 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.34/43.2/Театр
+    latitude: 62.34
+    longitude: 43.2
+    coeffNearestPopularity: 150.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 22:46:45 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 62.34/43.2/Театр
+    popularity: 3415.9778
+}
+2023-08-10 22:46:45 DEBUG MainServiceImpl:57 - Object sended to GUI : class ServerToGui {
+    prediction: 3416
+    nearestHotels: []
+    nearestCafe: [class ObjectInfo {
+        name: улица Мира 1Б, Shegovary, Arkhangelsk Oblast, Russia
+        latitude: 13.5
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Красноармейская улица 15Б, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 29.96
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: улица Ломоносова, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.23
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Визит, улица К.Либкнехта 9А, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.44
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Вечернее, улица Ленина 20, Shenkursk, Arkhangelsk Oblast, Russia, 165160
+        latitude: 30.45
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Околица, 11А, Ust'-Vaga, Виноградовский муниципальный округ, Russia
+        latitude: 47.77
+        longitude: 0.0
+    }, class ObjectInfo {
+        name: Набережная улица, Shelashsky, Arkhangelsk Oblast, Russia
+        latitude: 48.99
+        longitude: 0.0
+    }]
+}
+2023-08-10 23:05:56 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.2
+    longitude: 55.3
+}
+2023-08-10 23:05:56 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 64.2/55.3/Театр
+    latitude: 64.2
+    longitude: 55.3
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 23:06:01 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: null
+    popularity: 1338.8846
+}
+2023-08-10 23:06:01 ERROR MainServiceImpl:59 - Fail to send message to GUI : 
+Cannot invoke "ru.arctech.entities.Coordinates.getLat()" because "coordinates" is null
+2023-08-10 23:06:03 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 64.2
+    longitude: 65.3
+}
+2023-08-10 23:06:03 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 64.2/65.3/Театр
+    latitude: 64.2
+    longitude: 65.3
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-10 23:30:08 ERROR ObjectsEntity:124 - INIT BD FAILED Server2ml WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv
+2023-08-10 23:30:08 ERROR ObjectsEntity:84 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv
+2023-08-10 23:30:08 ERROR ObjectsEntity:63 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv
+2023-08-10 23:30:08 DEBUG ObjectsEntity:44 - VERSION OF SERVER IS 2
+2023-08-10 23:36:18 ERROR ObjectsEntity:124 - INIT BD FAILED Server2ml WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/touristObjects.csv
+2023-08-10 23:36:18 ERROR ObjectsEntity:84 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/hotels.csv
+2023-08-10 23:36:18 ERROR ObjectsEntity:63 - INIT BD FAILED LIST OF HOTELS WITH PATH : ../../../common-jpa/src/main/java/ru/relex/csv/cafes.csv
+2023-08-10 23:36:18 DEBUG ObjectsEntity:44 - VERSION OF SERVER IS 2
+2023-08-11 00:51:29 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 62.3
+    longitude: 43.1
+}
+2023-08-11 00:51:29 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.3/43.1/Театр
+    latitude: 62.3
+    longitude: 43.1
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-11 00:51:36 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: null
+    popularity: 1897.2131
+}
+2023-08-11 00:51:36 ERROR MainServiceImpl:59 - Fail to send message to GUI : 
+Cannot invoke "ru.arctech.entities.Coordinates.getLat()" because "coordinates" is null
+2023-08-11 00:51:39 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 62.3
+    longitude: 43.1
+}
+2023-08-11 00:51:39 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.3/43.1/Театр
+    latitude: 62.3
+    longitude: 43.1
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-11 00:53:59 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Музей
+    latitude: 62.2
+    longitude: 43.1
+}
+2023-08-11 00:53:59 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.2/43.1/Музей
+    latitude: 62.2
+    longitude: 43.1
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: true
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-11 00:54:00 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Музей
+    latitude: 62.2
+    longitude: 43.1
+}
+2023-08-11 00:54:00 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.2/43.1/Музей
+    latitude: 62.2
+    longitude: 43.1
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: true
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-11 00:54:02 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 62.2/43.1/Музей
+    popularity: 1449.4996
+}
+2023-08-11 00:54:02 DEBUG MainServiceImpl:57 - Object sended to GUI : class ServerToGui {
+    prediction: 1449
+    nearestHotels: []
+    nearestCafe: []
+}
+2023-08-11 00:54:02 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 62.2/43.1/Музей
+    popularity: 1449.4996
+}
+2023-08-11 00:54:02 ERROR MainServiceImpl:59 - Fail to send message to GUI : 
+Cannot invoke "ru.arctech.entities.Coordinates.getLat()" because "coordinates" is null
+2023-08-11 00:54:17 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Музей
+    latitude: 62.2
+    longitude: 43.1
+}
+2023-08-11 00:54:17 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.2/43.1/Музей
+    latitude: 62.2
+    longitude: 43.1
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: false
+    ethnicCenter: false
+    museum: true
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
+2023-08-11 00:54:17 DEBUG MainServiceImpl:53 - Object came from ML : class MlToServer {
+    name: 62.2/43.1/Музей
+    popularity: 1449.4996
+}
+2023-08-11 00:54:17 DEBUG MainServiceImpl:57 - Object sended to GUI : class ServerToGui {
+    prediction: 1449
+    nearestHotels: []
+    nearestCafe: []
+}
+2023-08-11 00:56:11 DEBUG MainServiceImpl:36 - Object came from GUI : class GuiToServer {
+    tourismObjectType: Театр
+    latitude: 62.2
+    longitude: 43.2
+}
+2023-08-11 00:56:11 DEBUG MainServiceImpl:45 - Object sended to ML : class ServerToMl {
+    name: 62.2/43.2/Театр
+    latitude: 62.2
+    longitude: 43.2
+    coeffNearestPopularity: 0.0
+    carAvailability: false
+    busAvailability: false
+    bigCarAvailability: false
+    shipAvailability: false
+    planeAvailability: false
+    theatre: true
+    ethnicCenter: false
+    museum: false
+    childrensTourism: false
+    cityAttractions: false
+    attraction: false
+    culturalCentre: false
+    shipbuilding: false
+    nationalPark: false
+    sanatorium: false
+    lookout: false
+    skiResort: false
+}
